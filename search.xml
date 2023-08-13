@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>javascript面试题</title>
+      <link href="/posts/3927.html"/>
+      <url>/posts/3927.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-谈谈你对闭包的理解？"><a href="#1-谈谈你对闭包的理解？" class="headerlink" title="1. 谈谈你对闭包的理解？"></a>1. 谈谈你对闭包的理解？</h2><p>这个问题想考察的主要有两个方面：</p><ul><li>对闭包的基本概念的理解</li><li>对闭包的作用的了解</li></ul><p><strong>什么是闭包？</strong></p><p>MDN的官方解释：</p><blockquote><p><code>闭包是函数和声明该函数的词法环境的组合</code></p></blockquote><p>更通俗一点的解释是：</p><blockquote><p><code>内层函数, 引用外层函数上的变量, 就可以形成闭包</code></p></blockquote><p>需求: 定义一个计数器方法, 每次执行一次函数, 就调用一次进行计数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">0</span>      <span class="comment">// 全局变量，太容易被别人修改了，希望有些数据是私有的，不让外部随意的访问</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span> () &#123;</span><br><span class="line">  count++</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fn函数被调用了&#x27;</span> + count + <span class="string">&#x27;次&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>()</span><br></pre></td></tr></table></figure><p>这样不好! count 定义成了全局变量, 太容易被别人修改了,  我们可以利用闭包解决</p><p>闭包实例:</p><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>   <span class="comment">// 局部变量，外部访问不到</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">add</span> () &#123;</span><br><span class="line">    count++       <span class="comment">//  引用外层函数上的变量，形成闭包</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fn函数被调用了&#x27;</span> + count + <span class="string">&#x27;次&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> add   <span class="comment">// 注意：需要 return 引用（内存才不会被释放）</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> addFn = <span class="title function_">fn</span>()</span><br><span class="line"><span class="title function_">addFn</span>()</span><br><span class="line"><span class="title function_">addFn</span>()</span><br><span class="line"><span class="title function_">addFn</span>()</span><br></pre></td></tr></table></figure><p>标记清除：从根部，全局出发，访问不到（无法触及）的内存空间，就会被自动回收</p><p><code>addFn = null</code>    &#x3D;&gt; 释放内存，断开了对于之前内部函数的引用，对应的缓存变量内容也会被释放掉</p><p><strong>闭包的主要作用是什么？</strong></p><p><code>实现数据的私有</code></p><p>在实际开发中，闭包最大的作用就是用来 **<code>变量私有</code>**。</p><p>下面再来看一个简单示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// 以 let 声明一个局部变量，而不是 this.name</span></span><br><span class="line">  <span class="comment">// this.name = &#x27;zs&#x27;     =&gt;  p.name</span></span><br><span class="line">  <span class="keyword">let</span> name = <span class="string">&#x27;hm_programmer&#x27;</span> <span class="comment">// 数据私有！！！！！</span></span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">getName</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123; </span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">setName</span> = <span class="keyword">function</span>(<span class="params">value</span>)&#123; </span><br><span class="line">    name = value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// new:</span></span><br><span class="line"><span class="comment">// 1. 创建一个新的对象</span></span><br><span class="line"><span class="comment">// 2. 让构造函数的this指向这个新对象</span></span><br><span class="line"><span class="comment">// 3. 执行构造函数</span></span><br><span class="line"><span class="comment">// 4. 返回实例</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="title function_">getName</span>()) <span class="comment">// hm_programmer</span></span><br><span class="line"></span><br><span class="line">p.<span class="title function_">setName</span>(<span class="string">&#x27;Tom&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="title function_">getName</span>()) <span class="comment">// Tom</span></span><br><span class="line"></span><br><span class="line">p.<span class="property">name</span> <span class="comment">// 访问不到 name 变量：undefined！！！！！！</span></span><br></pre></td></tr></table></figure><p>在此示例中，变量 <code>name</code> 只能通过 Person 的实例方法进行访问，外部不能直接通过实例进行访问，形成了一个私有变量。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 早期，闭包还用于解决for循环中，定时打印内容的问题</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span> ; i &lt;= <span class="number">5</span> ; i++) &#123;</span><br><span class="line">   (<span class="keyword">function</span>(<span class="params">num</span>) &#123;</span><br><span class="line">       <span class="comment">// 形参也可以理解为函数中的局部变量</span></span><br><span class="line">       <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(num)</span><br><span class="line">   &#125;, i * <span class="number">1000</span>)</span><br><span class="line">   &#125;)(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在nodejs环境中应用并代理跨域</title>
+      <link href="/posts/882eae4.html"/>
+      <url>/posts/882eae4.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="在nodejs环境中应用并代理跨域"><a href="#在nodejs环境中应用并代理跨域" class="headerlink" title="在nodejs环境中应用并代理跨域"></a>在nodejs环境中应用并代理跨域</h2><p>**<code>目标</code>**将打包好的代码打包上线，并在nodejs中代理跨域</p><h3 id="使用koa框架部署项目"><a href="#使用koa框架部署项目" class="headerlink" title="使用koa框架部署项目"></a>使用koa框架部署项目</h3><blockquote><p>到现在为止，我们已经完成了一个前端工程师的开发流程，按照常规的做法，此时，运维会将我们的代码部署到阿里云的ngix服务上，对于我们而言，我们可以将其部署到本机的nodejs环境中</p></blockquote><p>部署 自动化部署 &#x2F;手动部署</p><p>第一步，建立web服务文件夹  <strong><code>hrServer</code></strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> hrServer <span class="comment">#建立hrServer文件夹 </span></span><br></pre></td></tr></table></figure><p>第二步，在该文件夹下，初始化npm</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init -y</span><br></pre></td></tr></table></figure><p>第三步，安装服务端框架koa(也可以采用express或者egg)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i koa koa-static</span><br></pre></td></tr></table></figure><p>第四步，拷贝上小节打包的dist目录到**<code>hrServer/public</code>**下</p><p>第五步，在根目录下创建app.js，代码如下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Koa</span>  = <span class="built_in">require</span>(<span class="string">&#x27;koa&#x27;</span>)  <span class="comment">// 引入Koa包</span></span><br><span class="line"><span class="keyword">const</span> serve = <span class="built_in">require</span>(<span class="string">&#x27;koa-static&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Koa</span>();  <span class="comment">// 实例化一个web服务</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">serve</span>(__dirname + <span class="string">&quot;/public&quot;</span>)); <span class="comment">//将public下的代码静态化</span></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3333</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;人资项目启动&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><blockquote><p>node app</p><p>此时，我们可以访问，<a href="http://localhost:3333/">http://localhost:3333</a></p></blockquote><p>页面出来了</p><h3 id="解决history页面404问题"><a href="#解决history页面404问题" class="headerlink" title="解决history页面404问题"></a>解决history页面404问题</h3><p>但是，此时存在两个问题，</p><ol><li><strong>当我们刷新页面，发现404</strong></li></ol><blockquote><p>  这是因为我们采用了history的模式，地址的变化会引起服务器的刷新，我们只需要在app.js对所有的地址进行一下处理即可</p></blockquote><p>安装 koa中间件 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i koa2-connect-history-api-fallback <span class="comment">#专门处理history模式的中间件</span></span><br></pre></td></tr></table></figure><p><strong>注册中间件</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Koa</span>  = <span class="built_in">require</span>(<span class="string">&#x27;koa&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> serve = <span class="built_in">require</span>(<span class="string">&#x27;koa-static&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span>  &#123; historyApiFallback &#125; = <span class="built_in">require</span>(<span class="string">&#x27;koa2-connect-history-api-fallback&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Koa</span>();</span><br><span class="line"><span class="comment">// 这句话 的意思是除接口之外所有的请求都发送给了 index.html</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">historyApiFallback</span>(&#123;      <span class="comment">//应该先使用 处理访问的中间件 再使用静态化服务</span></span><br><span class="line">     <span class="attr">whiteList</span>: [<span class="string">&#x27;/prod-api&#x27;</span>]  <span class="comment">//prod-api代理跨域的问题  表示不要帮我处理 /prod-api 由自己处理</span></span><br><span class="line"> &#125;));  <span class="comment">// 这里的whiteList是 白名单的意思</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">serve</span>(__dirname + <span class="string">&quot;/public&quot;</span>)); <span class="comment">//将public下的代码静态化</span></span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3333</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;人资项目启动http://localhost:3333&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="解决生产环境跨域问题"><a href="#解决生产环境跨域问题" class="headerlink" title="解决生产环境跨域问题"></a>解决生产环境跨域问题</h3><ol><li>当点击登录时，发现接口404</li></ol><blockquote><p>  前面我们讲过，vue-cli的代理只存在于开发期，当我们上线到node环境或者ngix环境时，需要我们再次在环境中代理</p></blockquote><p>在nodejs中代理</p><p>安装跨域代理中间件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i koa2-proxy-middleware</span><br></pre></td></tr></table></figure><p>配置跨越代理</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Koa</span> = <span class="built_in">require</span>(<span class="string">&#x27;koa&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> serve = <span class="built_in">require</span>(<span class="string">&#x27;koa-static&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> &#123; historyApiFallback &#125; = <span class="built_in">require</span>(<span class="string">&#x27;koa2-connect-history-api-fallback&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> proxy = <span class="built_in">require</span>(<span class="string">&#x27;koa2-proxy-middleware&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Koa</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//注册跨域代理的中间件</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">proxy</span>(&#123;</span><br><span class="line">    <span class="attr">targets</span>: &#123;</span><br><span class="line">        <span class="comment">// 代理哪个地址  代理以 &#x27;/prod-api&#x27;为开头的地址</span></span><br><span class="line">        <span class="string">&#x27;/prod-api/(.*)&#x27;</span>: &#123;</span><br><span class="line">            <span class="attr">target</span>: <span class="string">&#x27;https://heimahr.itheima.net/api&#x27;</span>, <span class="comment">// 将以prod/api开头的内容代理到该地址  后端服务器地址</span></span><br><span class="line">            <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">pathRewrite</span>: &#123;</span><br><span class="line">                <span class="string">&#x27;/prod-api&#x27;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这句话 的意思是除接口之外所有的请求都发送给了 index.html</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">historyApiFallback</span>(&#123; <span class="comment">//应该先使用 处理访问的中间件 再使用静态化服务</span></span><br><span class="line">    <span class="attr">whiteList</span>: [<span class="string">&#x27;/prod-api&#x27;</span>] <span class="comment">// prod-api代理跨域的问题  表示不要帮我处理 /prod-api 由自己处理</span></span><br><span class="line">&#125;)); <span class="comment">// 这里的whiteList是 白名单的意思</span></span><br><span class="line">app.<span class="title function_">use</span>(<span class="title function_">serve</span>(__dirname + <span class="string">&quot;/public&quot;</span>)); <span class="comment">//将public下的代码静态化</span></span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3333</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;人资项目启动http://localhost:3333&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>注意：这里之所以用了<strong>pathRewrite</strong>，是因为生产环境的请求基础地址是 <strong>&#x2F;prod-api</strong>，需要将该地址去掉</p><p>此时，我们的项目就可以跨域访问了！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/posts/16107.html"/>
+      <url>/posts/16107.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="夏至"><a href="#夏至" class="headerlink" title="夏至"></a>夏至</h1><p>  一生的时间很短<br>  短到不过是两颗心之间的距离<br>  一生的时间也很长<br>  不如我们试着走走看</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/posts/16107.html"/>
+      <url>/posts/16107.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="夏至"><a href="#夏至" class="headerlink" title="夏至"></a>夏至</h1><p>  一生的时间很短<br>  短到不过是两颗心之间的距离<br>  一生的时间也很长<br>  不如我们试着走走看</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/posts/16107.html"/>
+      <url>/posts/16107.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="夏至"><a href="#夏至" class="headerlink" title="夏至"></a>夏至</h1><p>  一生的时间很短<br>  短到不过是两颗心之间的距离<br>  一生的时间也很长<br>  不如我们试着走走看</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阳光不错，微风正好</title>
+      <link href="/posts/b313554c.html"/>
+      <url>/posts/b313554c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="夏至"><a href="#夏至" class="headerlink" title="夏至"></a>夏至</h1><p>  一生的时间很短<br>  短到不过是两颗心之间的距离<br>  一生的时间也很长<br>  不如我们试着走走看</p>  <button type="button" onclick="SAONotify('Update','link start...','location.reload(true);')">SAO刷新按钮</button>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
