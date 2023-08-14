@@ -306,6 +306,10 @@ h6::before {
     animation: light_15px 10s linear infinite!important;
 }
 
+[data-theme="dark"] #about-page .author-tag {
+    animation: light_15px 10s linear infinite, floating 5s ease-in-out 0s infinite normal none running;
+}
+
 [data-theme="dark"] #site-subtitle {
     animation: light_10px 10s linear infinite!important;
 }
@@ -415,3 +419,138 @@ h6::before {
         text-shadow: #5636ed 0 0 5px;
     }
 }
+
+
+/* 关于我 */
+
+#about-page .author-box {
+    display: flex;
+    align-items: center;
+    flex: 3;
+    margin: 0 0 16px 0;
+}
+
+#about-page .author-tag-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    margin-right: 26px;
+}
+
+#about-page .author-tag-left .author-tag:first-child,
+#about-page .author-tag-left .author-tag:last-child {
+    margin-right: -16px;
+}
+
+#about-page .author-tag-right .author-tag:first-child,
+#about-page .author-tag-right .author-tag:last-child {
+    margin-left: -16px;
+}
+
+#about-page .author-tag:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#about-page .author-tag {
+    transform: translate(0, -4px);
+    padding: 1px 12px;
+    background: #fff;
+    border: 1px solid rgba(169, 169, 169, 0.7);
+    border-radius: 40px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 5px 12px -5px rgba(102, 68, 68, 0.00);
+    animation: floating 6s ease-in-out 0s infinite normal none running;
+    color: #000;
+    font-family: ZhuZiAYuanJWD;
+}
+
+
+/* 夜间模式 */
+
+
+/* [data-theme="dark"] #about-page .author-tag {
+    background-color: #fff;
+    color: #000;
+} */
+
+#about-page .author-tag:nth-child(2) {
+    animation-delay: .6s;
+}
+
+#about-page .author-tag:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+#about-page .author-tag:nth-child(4) {
+    animation-delay: 1.8s;
+}
+
+#about-page .author-tag-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 26px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, -4px);
+    }
+    50% {
+        transform: translate(0, 4px);
+    }
+    100% {
+        transform: translate(0, -4px);
+    }
+}
+
+@media (max-width: 768px) {
+    #about-page .author-tag {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 560px) {
+    #about-page .author-box {
+        margin-top: 10px;
+    }
+    #about-page .author-tag-right {
+        margin-left: 18px;
+    }
+    #about-page .author-tag-left {
+        margin-right: 18px;
+    }
+    #about-page .author-tag {
+        font-size: 3px;
+        padding: 0 6px;
+    }
+    #about-page .author-box .author-img {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #ccc;
+    }
+    #about-page .author-box .author-img img {
+        width: 100%;
+        height: 100%;
+    }
+    #about-page .author-box .image-dot {
+        opacity: 0;
+        width: 14px;
+        height: 14px;
+        border: 0;
+    }
+}
+
+
+/* #about-page .author-img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    background: var(--guole-secondbg);
+    user-select: none;
+} */
