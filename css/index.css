@@ -14498,11 +14498,11 @@ blockquote {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  background: -webkit-linear-gradient(135deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
-  background: -moz-linear-gradient(135deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
-  background: -o-linear-gradient(135deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
-  background: -ms-linear-gradient(135deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
-  background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
+  background: -webkit-linear-gradient(135deg, rgba(232,216,185,0.8), rgba(236,206,197,0.8), rgba(163,233,235,0.8), rgba(189,189,240,0.8), rgba(238,193,234,0.8));
+  background: -moz-linear-gradient(135deg, rgba(232,216,185,0.8), rgba(236,206,197,0.8), rgba(163,233,235,0.8), rgba(189,189,240,0.8), rgba(238,193,234,0.8));
+  background: -o-linear-gradient(135deg, rgba(232,216,185,0.8), rgba(236,206,197,0.8), rgba(163,233,235,0.8), rgba(189,189,240,0.8), rgba(238,193,234,0.8));
+  background: -ms-linear-gradient(135deg, rgba(232,216,185,0.8), rgba(236,206,197,0.8), rgba(163,233,235,0.8), rgba(189,189,240,0.8), rgba(238,193,234,0.8));
+  background: linear-gradient(-45deg, rgba(232,216,185,0.8), rgba(236,206,197,0.8), rgba(163,233,235,0.8), rgba(189,189,240,0.8), rgba(238,193,234,0.8));
 }
 #sidebar #sidebar-menus > .avatar-img {
   margin: 50px auto 20px;
