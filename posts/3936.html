@@ -1,0 +1,1351 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>web面试 | kilito</title><meta name="keywords" content="面试,前端"><meta name="author" content="kilito"><meta name="copyright" content="kilito"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="web面试"><meta name="application-name" content="web面试"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="web面试"><meta property="og:url" content="https://ekilito.github.io/posts/3936.html"><meta property="og:site_name" content="kilito"><meta property="og:description" content="每天一道面试题。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp"><meta property="article:author" content="kilito"><meta property="article:tag" content="个人博客,kilito,小清"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp"><meta name="description" content="每天一道面试题。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://ekilito.github.io/posts/3936"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//npm.onmicrosoft.cn"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="var(--anzhiyu-main)"/><link rel="mask-icon" href="/img/siteicon/apple-icon-180.png" color="#5bbad5"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/apple-icon-180.png"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-icon-180.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="bookmark" href="/img/siteicon/apple-icon-180.png"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: {"enable":true,"ck":"3FXVpXQlU2qrgdld","LingQueMonitorID":"3FXVpXQlU2qrgdld"},
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoo.wudl.cn/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"30796eace3084cff910c7e43aa524164","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://puquan.wudl.cn/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: kilito","link":"链接: ","source":"来源: kilito","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'kilito',
+  title: 'web面试',
+  postAI: '',
+  pageFillDescription: '3.css的盒模型, 4.css中选择器的优先级以及css权重如何计算？, 5.px、em、rem的区别？, 6.rem适配方案, 7.displaynone 与 visibilityhidden 的区别？, 8.position的值有哪些分别有哪些作用？, 9.为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？, 10.简述弹性盒子flex布局以及rem布局？, 11.如何解决margin塌陷？, 13.BFC是什么？, JavaScript 基础, 1.JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？, 2.如何判断JavaScript 的数据类型？, 3.简述创建函数的几种方式？, 4.JavaScript 创建对象的几种方式？, 6.x3Dx3D 和 x3Dx3Dx3D 的区别？, 7.nullundefined 的区别？, 8.JavaScript 中什么情况下会返回 undefined 值？, 9.如何区分数组和对象？, 10.多维数组降维的几种方法？, 13.什么是类数组（伪数组）如何转换为真实的数组？, 14.JavaScript中的作用域、预解析与变量声明提升？, 15.变量提升与函数提升的区别？, 16.什么是作用域链？, 17.如何延长作用域链？, 18.判断一个值是什么类型有哪些方法?, WebAPI, 6.event对象的常见应用？, 8.事件三要素, 9.事件执行过程, 10.谈谈事件委托的理解？, 11.JavaScript 中定时器有哪些？区别及用法是什么？, 13.JS拖动的原理？, 14.简述浏览器的渲染过程DOM树和渲染树的区别？, 15.如何最小化重绘和回流？, 16.JS延迟加载的方式有哪些？, JavaScript 高级, 1.typeof 和 instanceof 区别？, 2.js使用typeof能得到的哪些类型？, 4.什么是闭包？, 5.什么是内存泄漏？, 6.哪些操作会造成内存泄漏？, 7.说说你对原型prototype的理解, 8.介绍下原型链？, 9.常见的js中继承的方式？, 10.介绍this各种情况, 11.forEach 和 map 的区别？, 12.for in 和 for of 的区别？, 13.call、apply、bind 的区别？, 14.EventLoop事件循环机制, 15.js 防抖和节流, 16.new 操作符具体干了什么呢？, 19.split( ) 和 join( ) 的区别？, 21.谈谈你对 JS 垃圾回收机制的理解？, 22.JS 里垃圾回收机制是什么常用的是哪种怎么处理的？, 23.什么是任务队列？, 数据可视化, 1.echarts 的基本用法？, 2.如何使用 echarts？, Ajax/计算机网络, 1.什么是AjaxAjax的原理Ajax都有哪些优点和缺点？, 2.常见的 HTTP 状态码以及代表的意义？, 3.Ajax的实现流程, 4.Ajax接收到的数据类型有哪些数据如何处理？, 5.请解释一下js的同源策略, 6.为什么会有跨域的问题出现如何解决跨域问题？, 7.Get 和 Post 的区别以及使用场景, 8.解释 jsonp 的原理, 9.封装好的 Ajax 里的常见参数及其代表的含义, 10.HTTP 与 HTTPS 的区别？, 11.localStorage、sessionStorage、cookie 的区别？, 12.一个页面从输入 url 到页面加载显示完成这个过程都发生了什么？, 13.介绍一下websocket, 1.module、export、import 有什么作用, 2、使用箭头函数应注意什么/箭头函数和普通函数的区别, 3、介绍下 Set、Map 的区别, 4、setTimeout、Promise、Async/Await 的区别（必会）, 5、Promise 有几种状态什么时候会进入 catch？, 6、理解 async/await 以及相对 Generator 的优势, 1、对 Node.js 有没有了解 它有什么特点 适合做什么业务, 2、Node 的优点是什么？ 缺点是什么（必会）, 3、为什么要进行模块化（高薪常问）, Webpack, 1、什么是 Webpack（必会）, 2、Webpack 的优点是什么？（必会）的盒模型标准的盒模型标准盒模型指的是内容区域的宽度标准盒模型下盒子的大小怪异盒模型指的是总的宽度怪异盒模型下盒子的大小默认值标准模型和不算到中怪异盒模型和规划到中中选择器的优先级以及权重如何计算行内样式选择器类选择器标签通配符继承浏览器默认属性的区别绝对单位像素是相对于显示器屏幕分辨率而言的是相对长度单位相对于当前对象内为文字的字体尺寸如当前的行内文字的字体尺寸未被人设置则相对于浏览器的默认字体尺寸它会继承父级元素的字体大小因此并不是一个固定的值新增的一个相对单位根使用为元素设定字体大小时任然是相对大小但相对的只是根元素区别无法调整那些使用作为单位的字体大小而和可以缩放相对的只是根元素这个单位可谓集相对大小和绝对大小的有点于一身通过它可以做到只修改根元素就成比例的调整所有字体的大小适配方案通用方案有网易方案手淘方案设置根换算规则不能小于通过媒体查询分别设置每个屏幕的根直接除以再除以即可换算为优有一定的适用性换算也较为简单缺有兼容性的坑与的区别设置该属性后该元素下的元素都会隐藏占据的空间都会消失元素虽然不见了但是依然占据空间的位置区别具有继承性其子元素也会继承此属性子元素会显示不会响应计数器的计算虽然隐藏掉了但是计数器依然继续运行着中中支持属性不支持因此可以延迟执行配合使用纯实现延时显示效果可以提高用户体验会引起回流重排和重绘会引起重绘的值有哪些分别有哪些作用静态定位默认值不脱离文档流等属性不生效绝对定位关键是找对参照物找到最近一级的带有定位的父级元素进行位置移动如果找不到那么相对于浏览器窗口进行定位元素会脱离正常文档流不在占据空间将会失效通过来决定元素位置相对定位参照物元素偏移前位置设置相对定位后仍然有效不会脱离文档流固定定位参照浏览器窗口会脱离文档流当出现滚动条时固定定位的元素不会跟随滚动条滚动绝对定位会跟随滚动条滚动为什么会出现浮动浮动元素有引起什么问题如何清除浮动浮动将元素排除在普通流之外即元素会脱离文档流不占据空间浮动元素碰到包含它的边界或者浮动元素的边界停留为什么需要清除浮动子元素浮动后不占位置元素的高度无法被撑开影响与父元素同级的元素与浮动的元素同级的非浮动元素会跟随其后若非第一个元素浮动则该元素之前的元素也需要浮动否则会影响页面的结构解决方法清除浮动的方式使用中的给父元素添加样式给父元素设置双伪元素给父级元素设置或本质是构建一个简述弹性盒子布局以及布局是新增的一个相对单位相对于根节点字体的大小就是例如则通过它就可以做到只修改根元素的大小就能成比例的调整所有的字体大小只依赖的大小适配方案步骤首先动态计算的将所有的换算成的换算是根据设计稿的像素计算的注意必须动态的去设置的大小才能适配根据页面的宽度除以一个系数把算出的这个值赋给的属性换算值是根据设计图的宽度系数的系数如何解决塌陷父盒子设置添加后父子盒子就不是真正意义上的贴合可以设置透明色父盒子添加父盒子添加父盒子添加父盒子添加利用伪元素给父元素的前面添加一个空元素是什么直译为块级格式化上下文他是一个独立的渲染区域只有参与它规定了内部的如何布局并且与这个区域外部毫不相干布局规则内部的会在垂直方向一个接一个的放置垂直方向的距离由决定属于同一个的两个相邻的会发生重叠每个元素的的左边与包含快的左边相接触对于从左往右的格式化否则相反即使存在浮动也是如此的区域不会与重叠就是页面上的一个隔离的独立容器容器里面的子元素不会影响到外面的元素反之也如此计算的高度时浮动元素也参与计算哪些元素会生成根元素属性不为为或为不为基础的基本类型有哪些引用类型有哪些和的区别基本数据类型符号新增引用数据类型区别表示变量声明但未初始化时的值表示准备用来保存对象还没有真正保存对象的值从逻辑角度看值表示一个空对象指针标准要求和等值判断返回如何判断的数据类型可以用来区分除了类型以外的原始数据类型对象类型的可以从普通对象里面识别出函数不能用于判断原始数据类型的数据可以用来判断对象的类型需要注意的是的结果并不是一定可靠的可以在中通过自定义方法覆盖简述创建函数的几种方式函数声明函数表达式函数对象方式一个创建对象的几种方式字面量方式推荐用来模拟使用工厂函数来创建关键字使用原型对象的方式关键字混合模式原型和构造函数动态原型的方式可以看作是混合模式的一种特例和的区别等同符既要判断值也要判断类型是否相等等值符两个等号只要值相等就可以类型不同时会发生类型的自动转换转换为相同的类型后作比较的区别表示一个对象被定义了值为空值表示不存在这个值是一个表示无的原始值或者说表示缺少值就是此处应该有一个值但还没有定义当尝试读取时就会返回例如变量被声明了但没有赋值时就等于是一个对象空对象没有任何属性和方法例如作为函数的参数表示该函数的参数不是对象在验证时一定要使用用法变量被声明了但没有赋值时就等于调用函数时应该提供的参数没有提供该参数等于对象没有赋值的属性该属性的值为函数没有返回值时默认返回表示没有对象即该处不应该有值作为函数的参数表示该函数的参数不是对象作为对象原型链的终点中什么情况下会返回值访问声明但是没有初始化的变量访问不存在的属性访问函数的参数没有被显式的传递值访问任何被设置为值的变量没有定义的函数隐式返回函数没有显示的返回任何内容如何区分数组和对象通过中的来识别通过来识别通过调用来识别通过方法多维数组降维的几种方法数组字符串化递归使用无限反嵌套多层嵌套数组使用和递归无限反嵌套多层嵌套的数组什么是类数组伪数组如何转换为真实的数组伪数组无法直接调用数组方法或期望属性有什么特殊的行为不具有数组的方法但仍可以对它们进行遍历典型的是函数之类的等获取的类具有属性按索引方式存储数据不具有数组的等方法伪数组真数组或者中的作用域预解析与变量声明提升作用域就是变量的有效范围在一定的空间里可以对数据进行读写操作这个空间就是数据的作用域全局作用域最外层函数定义的变量拥有全局作用域即对任何内部函数来说都是可以访问的局部作用域局部作用域一般只在固定的代码片段内可访问到函数外部是无法访问的常见函数内部块级作用域凡是代码块就可以划分变量的作用域这种作用域的规则就叫块级作用域块级作用域函数作用域词法作用域之间的区别块级作用域和函数作用域描述的是什么东西可以划分变量的作用域词法作用域描述的是变量的查找规则预解析代码的执行是由浏览器中的解析器来执行的解析器执行代码的时候分为两个过程预解析过程和代码执行过程预解析过程把变量的声明提升到当前作用域的最前面只会提升声明不会提升赋值把函数的声明提升到当前作用域的最前面只会提升声明不会提升调用先提升在提升变量提升变量提升定义变量的时候变量的声明会被提升到作用域的最上面变量的赋值不会提升函数提升解析器首先会把当前作用域的函数声明提前到整个作用域的最前面变量声明提升使用关键字定义的变量被称为变量声明函数声明提升的特点是在函数声明的前面可以调用这个函数变量提升与函数提升的区别变量提升在代码执行前引擎会先进行预编译预编译期间会将变量声明与函数声明提升至其对应作用域的最顶端函数内声明的变量只会提升至该函数作用域最顶层当函数内部定义的一个变量与外部相同时那么函数体内的这个变量就会被上升到最顶端预编译后的代码结构可以看做如下运行顺序将变量的声明提升至最顶端赋值逻辑不提升代码执行到原位置即执行原赋值逻辑函数提升函数提升只会提升函数声明式写法函数表达式的写法不存在函数提升函数提升的优先级大于变量提升的优先级即函数提升在变量提升之上什么是作用域链当代码在一个环境中执行时会创建变量对象的一个作用域链由子级作用域链返回父级作用域中寻找变量就叫做作用域链作用域的下一个变量对象来自包含环境也叫外部环境而再下一个变量对象则来自下一个包含环境一直延续到全局执行环境全局执行环境的变量对象始终都是作用域链中的最后一个对象如何延长作用域链语句的块会创建一个新的变量对象包含的是被抛出的错误对对象的声明语句语句会将指定的对象添加到作用域链中判断一个值是什么类型有哪些方法运算符运算符方法只能区分基本类型即新增的七种对于数组对象来说使用都会统一返回要使用来判断某个对象值属于那种内置类型直接对一个数组调用通过指定数组为对象中的方法的上下文对象的常见应用阻止默认行为阻止链接默认的跳转行为阻止冒泡事件三要素事件源事件类型事件处理函数事件执行过程事件捕获过程当我们点击时首先是这个过程称为事件捕获浏览器的标准执行流程事件冒泡过程这个过程称为事件冒泡浏览器只支持冒泡不支持捕获浏览器先执行捕获后执行冒泡谈谈事件委托的理解事件代理则是一种简单的技巧把事件处理器添加到一个上级元素上这样就避免了把事件处理器添加到多个子级元素上这主要得益于浏览器的事件冒泡机制优点减少事件注册节省内存在上代理所有的的事件在上代理所有的事件简化了节点更新时相应事件的更新不用在新添加的上绑定事件当删除某个时不用解绑上面的事件缺点事件委托基于冒泡对于不冒泡的事件不支持层级过多冒泡过程中可能会被某层阻止掉理论上委托会导致浏览器频繁调用处理函数虽然可能不需要处理所以建议就近委托把所有事件都用代理就可能会出现事件误判中定时器有哪些区别及用法是什么方法用于在指定的毫秒数后调用函数或计算表达式也叫定时器方法可按照指定的周期以毫秒计来调用函数或计算表达式也叫计时器方法会不停的调用函数直到被调用或窗口被关闭由返回的值可用作方法的参数拖动的原理的拖拽效果主要用到以下三个事件鼠标按下事件鼠标移动事件鼠标抬起事件当点击的时候记录当前鼠标的坐标值也就是值以及被拖拽的的值而且还要在鼠标按下的回调函数回调函数里添加鼠标移动的事件和添加鼠标抬起的事件这个抬起的事件是为了解除鼠标移动的监听因为只有在鼠标按下才可以拖拽抬起就不会移动了当鼠标按下鼠标移动的时候记录移动中的值那么这个被拖拽的的值就是鼠标按下时记录的的值移动中的值鼠标按下时的值鼠标按下时记录的值移动中的值鼠标按下时的值简述浏览器的渲染过程树和渲染树的区别浏览器的渲染过程解析构建树并行请求文件下载完成开始构建树树构建结束后和一起生成渲染树布局计算出每个节点在屏幕中的位置显示通过显卡把页面画到屏幕上树和渲染树的区别树与标签一一对应包括和隐藏元素渲染树不包括和隐藏元素大段文本的每一个行都是独立节点每一个节点都有对应的属性如何最小化重绘和回流重绘当元素的一部分属性发生改变如外观背景颜色等不会引起布局变化只需要浏览器根据元素的新属性重新绘制使元素呈现新的外观叫做重绘重排回流当树中的一部分或者全部因为大小边距等问题发生改变而需要树重新计算的过程重绘不一定需要重排比如颜色的改变重排必然导致重绘比如改变网页位置方法需要对元素进行复杂的操作时可以先隐藏操作完成后再显示需要创建多个节点时使用创建完后一次性加入缓存属性值这样多次使用只产生一次回流尽量避免用布局会引起回流避免使用表达式因为每次调用都会重新计算值包括加载页面尽量使用属性简写批量修改元素样式延迟加载的方式有哪些属性用途表明脚本在执行时不会影响页面的构造脚本会被延迟到整个页面都解析完毕之后再执行在元素中设置属性等同告诉浏览器立即下载但延迟执行说明虽然元素放在了元素中但包含的脚本将延迟浏览器遇到标签后执行延迟脚本并不一定会按照顺序执行属性只适用于外部脚本属性为标签定义了属性用于改变处理脚本的行为只适用于外部脚本文件目的不让页面等待脚本下载和执行从而异步加载页面其他内容异步脚本一定会在页面事件前执行不能保证脚本会按顺序执行和一样都不会阻塞其他资源下载所有不会影响页面的加载缺点不能控制加载的顺序动态创建方式使用的方法使用延迟方法的加载时间延迟加载代码给网页加载留出更多时间让最后加载高级和区别在中判断一个变量的类型可以用数字类型返回的值是字符串类型返回的值是布尔类型返回的值是对象数组返回的值是不存在的变量函数或者将返回使用运算符无论引用的是什么类型的对象它都返回运算符来解决这个问题用于判断某个对象是否被另一个函数构造使用能得到的哪些类型只能区分值类型什么是闭包定义一个作用域可以访问到另外一个函数内部的局部变量或者说一个函数子函数访问另一个函数父函数中的变量此时就会产生闭包那么这个变量所在的函数我们就称之为闭包函数优缺点闭包的主要作用延伸了变量的作用范围因为闭包函数中的局变量不会等着闭包函数执行完就销毁因为还有别的函数要调用它只有等着所有的函数都调用完了它才会销毁闭包会造成内存泄露如何解决用完之后手动是释放详解闭包不仅仅可以实现函数内部的作用域访问这个函数中的局部变量还可以实现全局作用域或者别的地方的作用域也可以访问到函数内部的局部变量实现方法就是了一个函数所以函数也是我们实现闭包的一个主要原理因为返回的这个函数本身就是我们函数内部的一个子函数所以子函数是可以访问父函数里面的局部变量的所以返回完毕之后外面的函数一调用就会回头调用返回的这个函数所以就可以拿到这个子函数对应的父函数里面的局部变量注意由于闭包会使得函数中的变量都被保存在内存中内存消耗詪大所以不能滥用闭包否则会造成网页的性能问题闭包会在父函数外部改变父函数内部变量的值什么是内存泄漏内存泄漏也称为存储泄漏用动态存储分配函数动态开辟的空间在使用完毕后未释放结果导致一直占据该内存单元直到程序结束其实说白了就是该内存空间使用完毕之后未回收导致内存泄漏哪些操作会造成内存泄漏的第一个参数使用字符串而非函数的话会造成内存泄漏闭包控制台日志循环垃圾回收器定期扫描对象并计算引用了每个对象的其他对象的数量如果一个对象的引用数量为或对该对象的唯一引用是循环的那么该对象的内存即可回收说说你对原型的理解在中原型也是一个对象通过原型可以实现对象的属性继承的函数对象中都包含了一个内部属性这个属性所对应的就是该函数对象的原型作为函数对象的内部属性是不能被直接访问的原型的主要作用就是实现继承与扩展对象介绍下原型链原型每个对象都会在其内部初始化一个属性就是原型原型链当访问一个对象的某个属性时会先在这个对象本身属性上查找如果没有找到则会去它的隐式原型上查找即它的构造函数的如果还没有找到就会再在构造函数的的中查找这样一层一层向上查找就会形成一个链式结构我们称为原型链当我们修改原型时与之相关的对象也会继承这一改变常见的中继承的方式原型链继承构造函数继承组合继承原型式继承寄生式继承寄生组合式继承中实现继承介绍各种情况以函数形式调用时永远都是以方法的形式调用时是调用方法的对象以构造函数的形式调用时是新创建的那个实例对象使用和调用时是指定的那个对象箭头函数箭头函数的看外层是否有函数如果有外层函数的就是内部箭头函数的如果没有就是特殊情况通常意义上指针指向为最后调用它的对象这里需要注意的一点就是如果返回值是一个对象那么指向的就是那个返回的对象如果返回值不是一个对象那么还是指向函数的实例和的区别相同点都是循环遍历数组中的每一项和方法里每次执行匿名函数都支持个参数参数分别是原数组匿名函数中的都是指向只能遍历数组都不会改变原数组方法返回一个新数组数组中的元素为原始数组调用函数处理后的值方法不会对空数组进行检测方法不会改变原始数方法方法用来调用数组的每个元素将元素传给回调函数对于空数组就不会调用回调函数的和的区别推荐在循环对象属性的时候使用在遍历数组的时候使用循环的是循环的是注意是新引入的特性修复了引入的的不足不能循环普通的对象需要通过和搭配使用的区别共同点都是用来改变函数的对象的指向的第一个参数都是要指向的对象都可以利用后续参数传参方法调用一个函数其具有一个指定的值分别地提供的参数参数的列表方法的作用和方法类似区别就是方法接受的是参数列表方法接收的是一个参数数组方法创建一个新的函数当这个新的函数被调用时其值为提供的值其参数列表前几项置为创建时指定的参数列表事件循环机制的事件分两种宏任务和微任务宏任务包括整体代码微任务非同步的中事件的执行顺序先执行宏任务然后执行微任务任务有同步的任务和异步的任务同步的进入主线程异步的进入并注册函数异步事件完成后会将回调函数放在队列中如果还有异步的宏任务那么就会进行循环执行上述的操作防抖和节流在进行窗口的输入框内容校验等操作时如果事件处理函数的频率无限制会加重浏览器的负担导致用户的体验不好此时可以使用防抖和节流来减少使用频率同时又不影响实际结果防抖当持续触发事件时一定时间段内没有再触发事件事件处理函数才会执行一次如果设定的时间到来之前又一次触发了事件就重新开始延时节流当持续触发事件时保证一定时间内只调用一次事件处理函数比如持续触发事件时并不立即执行函数每隔才会执行一次就比如水龙头最好是按照一定规律在某个时间间隔内一滴一滴的往下滴总结函数防抖将几次操作合并为一此操作进行原理是维护一个计时器规定在延迟时间后触发函数但是在延迟时间内再次触发的话机会取消之前的计时器而重新设置只有最后一次操作能被触发函数节流使得一定时间内只触发一次函数原理是通过判断是否到达一定时间来触发函数区别函数节流不管事件触发有多频繁都会保证在规定时间内一定会执行一次真正的事件处理函数而函数防抖只是在最后一次事件后才触发一次函数应用场景防抖搜索联想用户在不断输入值时用防抖来节约请求资源触发的时候不断的调整浏览器窗口大小会不断的触发这个事件用防抖来让其只触发一次节流鼠标不断点击触发单位时间内只触发一次监听滚动事件比如是否滑倒底部自动加载更多用来判断操作符具体干了什么呢创建一个空的对象并且变量引入该对象同时还继承了函数的原型设置原型链空对象指向构造函数的原型对象执行函数体修改构造函数指针指向空对象并执行函数体判断返回值返回对象就用该对象没有的话就创建一个对象和的区别是把一串字符根据某个分隔符分成若干个元素存放在一个数组里即切割成数组的形式是把数组中的字符串连成一个长串可以大体上认为是的逆操作谈谈你对垃圾回收机制的理解标记清除法引用计数法里垃圾回收机制是什么常用的是哪种怎么处理的的垃圾回收机制是为了以防内存泄漏内存泄漏的含义就是当已经不需要某块内存时这块内存还存在着垃圾回收机制就是间歇的不定期的寻找到不再使用的变量并释放掉它们所指向的内存最常见的垃圾回收方式是标记清除工作原理是当变量进入环境时将这个变量标记为进入环境当变量离开环境的时候则将其标记为离开环境标记离开环境就回收内存工作流程垃圾回收器在运行的时候会给存储在内存中的所有变量都加上标记去掉环境中的变量以及破环环境中的变量引用的变量的标记再被加上标记的会被视为准备删除的变量垃圾回收器完成内存清除工作销毁按那些带标记的值并回收他们所占用的内存空间什么是任务队列任务队列主要分两种宏任务整体代码微任务同步任务在主线程上排队执行的任务只有前一个任务执行完毕才能执行后一个任务异步任务不进入主线程而进入任务队列的任务只有任务队列通知主线程某个异步任务可以执行了该任务才会进入主线程执行数据可视化的基本用法初始化类创建一个为的并初始化绘图实例样式配置标题鼠标悬停气泡配置横轴类别销量数据参数与横轴一一对应渲染图展示表如何使用获取在官网下载版本或下载引入引入或者在入口文件里引用创建一个元素用来放置图表配置属性计算机网络什么是的原理都有哪些优点和缺点什么是它是一种创建交互式网页应用的网页开技术沟通客户端与服务器可以在不必刷新整个浏览器的情况下与服务器进行异步通讯的技术的原理通过对象来向服务器发送异步请求从服务器获得数据是的核心机制简单的说也就是可以及时向服务器提出请求和处理响应而不阻塞用户达到无刷新的效果的优点最大的一点是页面无刷新用户体验非常好使用异步方式与服务器通信具有更加迅速的响应能力的原则是按需取数据可以最大层度上减少冗余请求和响应服务器造成的负担常见的状态码以及代表的意义请求已成功请求所希望的响应头或数据体将随此响应返回请求格式错误请求失败请求所希望得到的资源未在服务器上发现服务器遇到了一个未曾预料的抓状况导致了它无法完成对请求的处理未认证没有网站登录的实现流程创建对象也就是创建一个异步调用对象创建一个新的请求并指定该请求的方法及验证信息设置响应请求状态变化的函数发送请求获取异步调用返回的数据使用和实现局部刷新接收到的数据类型有哪些数据如何处理字符串二进制流数据字符串反序列化后转成引用类型使用直接使用前端用转换如何处理数据字符串转对象格式的数据转换成对象张三李四王五请解释一下的同源策略同源策略是客户端脚本的重要的安全度量标准目的是防止某个文档或脚本从多个不同源装载同源是指协议域名端口相同同源策略是一种安全协议指一段脚本只能读取来自同一来源的窗口和文档的属性为什么会有跨域的问题出现如何解决跨域问题什么是跨域指的是浏览器不能执行其他网站的脚本它是由浏览器的同源策略造成的是浏览器对施加的安全限制防止他人恶意攻击网站解决跨域动态创建一个标签利用标签的属性不受同源策略限制跨域资源共享原理服务器设置响应头之后浏览器将会允许跨域请求限制浏览器需要支持可以支持等方法兼容以上需要后台设置允许所有域名访问只允许所有域名访问反向代理和的区别以及使用场景区别使用或传参而将数据放在中的会有长度上的限制而的数据则可以非常大比更安全因为数据在地址栏上不可见最本质的区别基于协议进行请求的其实和无区别只是请求的方式不同都可以携带请求体也可以在带参数使用场景使用请求的结果有持续性的作用例如数据库内添加新的数据行若使用方法则表单上收集的数据可能让过长要传送的数据不是采用编码使用请求是为了查找资源表单数据仅用来搜索请求结果无持续性的副作用收集的数据及表单内的输入字段名称的总长度不超过个字符解释的原理什么是的作用并不是一种数据格式而是一种数据格式是用来解决跨域获取数据的一种解决方案具体原理是通过动态创建标签然后通过标签的属性获取文件中的脚本该脚本的内容是一个函数调用参数就是服务器返回的数据为了处理这些返回的数据需要事先在页面定义好回调函数本质上使用的并不是技术请求受同源策略的影响不允许进行跨域请求而标签的属性中的链接却可以访问跨域的脚本利用这个特性服务端不在返回格式的数据而是返回调用某个函数的代码在中进行了调用这样就实现了跨域封装好的里的常见参数及其代表的含义发送请求的地址请求方式默认为同步异步请求默认所有请求均为异步请求超时时间设置单位毫秒要求为或类型的参数发送到服务器的数据默认为设置为将不会从浏览器缓存中加载请求信息预期服务器返回的数据类型与的区别协议需要到申请证书一般免费证书较少因而需要一定的费用是超文本传输协议信息是明文传输则是具有安全性的加密传输协议和使用的是完全不同的连接方式用的端口也不一样前者是后者是的连接很简单是无状态的协议是由协议构建的可进行加密传输身份认证的网络协议比协议安全的区别共同点都是保存在浏览器且同源的区别数据始终在同源的请求中携带即使不需要即在浏览器和服务器间来回传递而和不会自动把数据发送给服务器仅在本地保存数据还有路径的概念可以限制只属于某个路径下存储大小限制也不同数据不能超过同时因为每次请求都会携带所以只适合保存很小的数据和虽然也有存储大小的限制但比大得多可以达到或更大数据有效期不同仅在当前浏览器窗口关闭之前有效始终有效窗口或浏览器关闭也一直保存因此用作持久数据只设置在过期时间之前有效即使窗口关闭或浏览器关闭作用域不同不在不同的浏览器窗口中共享即使是同一个页面在所有同源窗口中都是共享的在所有同源中都是共享的支持事件通知机制可以将数据更新的通知发送给监听者的接口使用更方便一个页面从输入到页面加载显示完成这个过程都发生了什么浏览器查找域名对应的地址浏览器向服务器发送一个请求三次握手服务器重定向浏览器跟踪重定向地址请求另一个带的网址服务器处理请求通过路由读取资源服务器返回一个响应浏览器进行树构建浏览器发送请求获取嵌在中的资源浏览器显示完成页面浏览器发送异步请求介绍一下是一种网络通信协议是开始提供的一种在单个连接上进行全双工通信的协议这个对比协议来说协议是一种无状态的无连接的单向的应用层协议通信请求只能由客户端发起服务端对请求做出应答处理协议无法实现服务器主动向客户端发起消息连接允许客户端和服务器之间进行全双工通信以便任一方都可以通过建立的连接将数据推送到另一端只需要建立一次连接就可以一直保持连接状态有什么作用是用来统一前端模块化方案的设计思路和实现方案的出现统一了前端模块化的实现方案整合规范了浏览器服务端的模块化的方法用来取代传统的等等一系列前端模块不同的实现方案使前端模块化更加统一规范也能更加能实现大型的应用程序开发引入的模块是静态加载编译阶段加载而不是动态加载运行时加载引入导出的接口值是动态绑定关系即通过该接口可以取到模块内部实时的值使用箭头函数应注意什么箭头函数和普通函数的区别区别用了箭头函数就不是指向而是父级指向是可变的不能够使用对象不能用作构造函数这就是说不能够使用命令否则会抛出一个错误不可以使用命令因此箭头函数不能用作函数介绍下的区别区别应用场景用于数据重组用于数据储存成员不能重复只有键值没有键名类似数组可以遍历方法有本质上是健值对的集合类似集合可以遍历可以跟各种数据格式转换的区别必会事件循环中分为宏任务队列和微任务队列宏任务在新标准中叫主要包括整体代码微任务在新标准中叫主要包括新特性的区别的回调函数放到宏任务队列里等到执行栈清空以后执行里的回调函数会放到相应宏任务的微任务队列里等宏任务里面的同步代码执行完再执行函数表示函数里面可能会有异步方法后面跟一个表达式方法执行时遇到会立即执行表达式然后把表达式后面的代码放到微任务队列里让出执行栈让同步代码先执行有几种状态什么时候会进入有几种状态三个状态两个过程什么时候会进入当为时会进入理解以及相对的优势理解是用来解决异步的函数是函数的语法糖使用关键字来表示在函数内部使用来表示异步函数返回一个对象可以使用方法添加回调函数当函数执行的时候一旦遇到就会先返回等到异步操作完成再接着执行函数体内后面的语句对有没有了解它有什么特点适合做什么业务什么是它既是开发平台也是运行环境也是个新的语言它本身是基于的引擎开发的因此在编写基于它的代码的时候使用语言但是又不同于传统概念的它的服务端功能以及部分客户端功能必须在服务端运行所以它实际上是一种在服务端的开发运行的语言它本身可以作为也可以当作用特点他是一个运行环境依赖于引擎进行代码解释特征单线程事件驱动非阻塞轻量可伸缩适于实时数据交互应用单进程单线程一个应用程序对应一个进程一个进程下面会有多个线程每个线程用于处理任务无法直接渲染静态页面提供静态服务没有根目录的概念必须通过路由程序指定文件才能渲染文件比其他服务端性能更好速度更快适用业务是单线程非阻塞事件驱动它的特点决定了它适合做一些大量的东西比如聊天室表单提交等不需要大量计算的功能做一些微信后端开发或者做消息系统等可以整个项目用也可以根据它的特点在某个模块使用比如打造一个消息系统等的优点是什么缺点是什么必会优点高并发最主要的一个优点适合密集型应用缺点不适合密集型应用密集型应用给带来的挑战主要是由于单线程的原因如果有长时间运行的计算比如大循环将会导致时间片不能释放使得后续无法发起解决方案分解大型运算任务为多个小任务使得运算能够适时释放不阻塞调用的发起只支持单核不能充分利用可靠性低一旦代码某个环节崩溃整个系统都崩溃原因单进程单线程解决方案反向代理负载均衡开多个进程绑定多个端口开多个进程监听同一个端口使用模块开源组件库质量参差不齐更新快向下不兼容不方便错误没有为什么要进行模块化高薪常问目前前端的开发形势就是模块化和组件化从软件工程学分析来说就是有了更好的可维护性可复用性等好处但是前端的主要语言在之前却没有模块化功能之前有使用和但是推出的模块化之后的模块化使用形式基本统一什么是必会基本定义是一个打包模块化的工具在里一切文件皆模块通过转换文件通过注入钩子最后输出由多个模块组合成的文件专注构建模块化项目可以看做是模块打包机它做的事情是分析你的项目结构找到模块以及其它的一些浏览器不能直接运行的拓展语言等并将其打包为合适的格式以供浏览器使用的优点是什么必会专注于处理模块化的项目能做到开箱即用一步到位通过扩展完整好用又不失灵活使用场景不局限于开发社区庞大活跃经常引入紧跟时代发展的新特性能为大多数场景找到已有的开源扩展提供了更好的开发体验',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-13 14:45:20',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/cursur.css"><link rel="stylesheet" href="/css/fenleiye.css"><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://bu.dusays.com/2023/08/26/64ea10217f8f4.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://wudl.cn" title="主页"><img class="back-menu-item-icon" src="/img/48.png" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.wudl.cn" title="博客"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ccv-engineer.gitee.io/" title="旧站"><img class="back-menu-item-icon" src="/img/32.png" alt="旧站"/><span class="back-menu-item-text">旧站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://7bu.top/" title="图床"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="图床"/><span class="back-menu-item-text">图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">kilito</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tag faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://chatgpt.wudl.cn"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> ChatGPT</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://gpt.zhizhubao.com/chat"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 私人助理</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/?id=891137324&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/kongtiao/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/zaobao/"><span> 早报</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://bu.dusays.com/2023/08/13/64d894b4a4f06.jpg" target="_blank"><img class="post-qr-code-img" alt="wechat" src="https://bu.dusays.com/2023/08/13/64d894b4a4f06.jpg"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://bu.dusays.com/2023/08/13/64d894b1726cd.jpg" target="_blank"><img class="post-qr-code-img" alt="alipay" src="https://bu.dusays.com/2023/08/13/64d894b1726cd.jpg"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Generato/" style="font-size: 1.05rem;">Generato<sup>1</sup></a><a href="/tags/fetch/" style="font-size: 1.05rem;">fetch<sup>1</sup></a><a href="/tags/js%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 1.05rem;">js面试题<sup>1</sup></a><a href="/tags/koa/" style="font-size: 1.05rem;">koa<sup>1</sup></a><a href="/tags/this/" style="font-size: 1.05rem;">this<sup>1</sup></a><a href="/tags/vue%E5%8E%9F%E7%90%86/" style="font-size: 1.05rem;">vue原理<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%86%99/" style="font-size: 1.05rem;">手写<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%86%99Promise/" style="font-size: 1.05rem;">手写Promise<sup>1</sup></a><a href="/tags/%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA/" style="font-size: 1.05rem;">智慧园区<sup>1</sup></a><a href="/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/" style="font-size: 1.05rem;">柯里化<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.05rem;">生活<sup>1</sup></a><a href="/tags/%E7%BB%A7%E6%89%BF/" style="font-size: 1.05rem;">继承<sup>1</sup></a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.05rem;">设计模式<sup>1</sup></a><a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 1.05rem;">闭包<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.05rem;">面试<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url">面试</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>面试</span></a></span></div></div><h1 class="post-title" itemprop="name headline">web面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-10-13T06:43:53.500Z" title="发表于 2023-10-13 14:43:53">2023-10-13</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-10-13T06:45:20.656Z" title="更新于 2023-10-13 14:45:20">2023-10-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">12.9k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>41分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为安徽"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>安徽</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://ekilito.github.io/posts/3936.html"><header><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url">面试</a><a href="/tags/%E9%9D%A2%E8%AF%95/" tabindex="-1" itemprop="url">面试</a><h1 id="CrawlerTitle" itemprop="name headline">web面试</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">kilito</span><time itemprop="dateCreated datePublished" datetime="2023-10-13T06:43:53.500Z" title="发表于 2023-10-13 14:43:53">2023-10-13</time><time itemprop="dateCreated datePublished" datetime="2023-10-13T06:45:20.656Z" title="更新于 2023-10-13 14:45:20">2023-10-13</time></header><h5 id="3-css的盒模型"><a href="#3-css的盒模型" class="headerlink" title="3.css的盒模型"></a>3.css的盒模型</h5><ol>
+<li>w3c标准的盒模型（标准盒模型）<ol>
+<li>width: 指的是内容区域 content 的宽度</li>
+<li>标准盒模型下盒子的大小 &#x3D; content + padding + border + margin</li>
+</ol>
+</li>
+<li>怪异盒模型<ol>
+<li>width：指的是 content + border + padding 总的宽度</li>
+<li>怪异盒模型下盒子的大小 &#x3D; width(content + padding + border) + margin</li>
+</ol>
+</li>
+<li>box-sizing<ol>
+<li>content-box: 默认值 标准模型 ，border 和 padding 不算到width中</li>
+<li>border-box: 怪异盒模型 ， border 和 padding 规划到width中</li>
+</ol>
+</li>
+</ol>
+<h5 id="4-css中选择器的优先级以及css权重如何计算？"><a href="#4-css中选择器的优先级以及css权重如何计算？" class="headerlink" title="4.css中选择器的优先级以及css权重如何计算？"></a>4.css中选择器的优先级以及css权重如何计算？</h5><p>important &gt; 行内样式   &gt; Id选择器   &gt; 类选择器  &gt; 标签 &gt; 通配符 &gt; 继承 &gt; 浏览器默认属性</p>
+<h5 id="5-px、em、rem的区别？"><a href="#5-px、em、rem的区别？" class="headerlink" title="5.px、em、rem的区别？"></a>5.px、em、rem的区别？</h5><ol>
+<li>px：绝对单位。像素px是相对于显示器屏幕分辨率而言的。</li>
+<li>em：是相对长度单位，相对于当前对象内为文字的字体尺寸。如当前的行内文字的字体尺寸未被人设置，则相对于浏览器的默认字体尺寸。它会继承父级元素的字体大小因此并不是一个固定的值。</li>
+<li>rem：c3新增的一个相对单位（root em，根em），使用rem为元素设定字体大小时，任然是相对大小，但相对的只是html根元素。</li>
+<li>区别：IE无法调整那些使用px作为单位的字体大小，而em和rem可以缩放，rem相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的有点于一身。通过它可以做到只修改根元素就成比例的调整所有字体的大小。</li>
+</ol>
+<h5 id="6-rem适配方案"><a href="#6-rem适配方案" class="headerlink" title="6.rem适配方案"></a>6.rem适配方案</h5><p>通用方案（有网易方案、手淘方案）</p>
+<ol>
+<li>设置根 font-size （换算规则 1rem 不能小于 12px）</li>
+<li>通过媒体查询分别设置每个屏幕的根 font-size</li>
+<li>CSS直接除以 2 再除以100 即可换算为 rem</li>
+</ol>
+<p>优：有一定的适用性，换算也较为简单  缺：有兼容性的坑</p>
+<h5 id="7-display-none-与-visibility-hidden-的区别？"><a href="#7-display-none-与-visibility-hidden-的区别？" class="headerlink" title="7.display:none 与 visibility:hidden 的区别？"></a>7.display:none 与 visibility:hidden 的区别？</h5><ol>
+<li>display: none 设置该属性后，该元素下的元素都会隐藏，占据的空间都会消失</li>
+<li>visibility：hidden  元素虽然不见了，但是依然占据空间的位置</li>
+</ol>
+<p>区别：</p>
+<ol>
+<li>visibility 具有继承性，其子元素也会继承此属性。 visibility：visible 子元素会显示</li>
+<li>visibility 不会响应计数器的计算，虽然隐藏掉了，但是计数器依然继续运行着</li>
+<li>css3中，transition中支持visibility属性，不支持display，因此transition可以延迟执行，配合visibility使用纯css实现hover延时显示效果可以提高用户体验</li>
+<li>display：none 会引起回流（重排）和重绘， visibility：hidden 会引起重绘</li>
+</ol>
+<h5 id="8-position的值有哪些，分别有哪些作用？"><a href="#8-position的值有哪些，分别有哪些作用？" class="headerlink" title="8.position的值有哪些，分别有哪些作用？"></a>8.position的值有哪些，分别有哪些作用？</h5><ol>
+<li><p>静态定位 static ：默认值，不脱离文档流，top、right、bottom、left等属性不生效</p>
+</li>
+<li><p>绝对定位 absolute：关键是找对参照物，找到最近一级的带有定位的父级元素进行位置移动，如果找不到，那么相对于浏览器窗口进行定位。 元素会脱离正常文档流，不在占据空间，margin：auto将会失效，通过top、left、bottom、right 来决定元素位置。</p>
+</li>
+<li><p>相对定位 relative ：参照物，元素偏移前位置。设置相对定位后，margin：auto仍然有效，不会脱离文档流</p>
+</li>
+<li><p>固定定位 fixed ：参照浏览器窗口。会脱离文档流。</p>
+<p>当出现滚动条时，固定定位的元素不会跟随滚动条滚动，绝对定位会跟随滚动条滚动。</p>
+</li>
+</ol>
+<h5 id="9-为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？"><a href="#9-为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？" class="headerlink" title="9.为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？"></a>9.为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？</h5><p>浮动将元素排除在普通流之外，即元素会脱离文档流，不占据空间。浮动元素碰到包含它的边界或者浮动元素的边界停留。</p>
+<p><strong>为什么需要清除浮动</strong>？</p>
+<ol>
+<li>子元素浮动后，不占位置，元素的高度无法被撑开，影响与父元素同级的元素</li>
+<li>与浮动的元素同级的非浮动元素会跟随其后</li>
+<li>若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面的结构解决方法</li>
+</ol>
+<p><strong>清除浮动的方式</strong>？</p>
+<ol>
+<li>使用 css 中的 clear：both；</li>
+<li>给父元素添加 clearfix 样式；</li>
+<li>给父元素设置双伪元素；</li>
+<li>给父级元素设置 overflow:hidden;  或 overflow:auto; 本质是构建一个 BFC；</li>
+</ol>
+<h5 id="10-简述弹性盒子flex布局以及rem布局？"><a href="#10-简述弹性盒子flex布局以及rem布局？" class="headerlink" title="10.简述弹性盒子flex布局以及rem布局？"></a>10.简述弹性盒子flex布局以及rem布局？</h5><p>rem是CSS3新增的一个相对单位，相对于根节点（html）字体的大小，r 就是 root。</p>
+<p>例如： html { font-size：12px }  则 2rem &#x3D; 24px</p>
+<p>通过它就可以做到只修改根元素的大小，就能成比例的调整所有的字体大小，只依赖html的大小。</p>
+<p>适配方案步骤：</p>
+<ol>
+<li>首先动态计算html的 font-size</li>
+<li>将所有的px换算成rem（rem的换算是根据设计稿的像素计算的）</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>必须动态的去设置 html 的大小，才能适配</li>
+<li>根据页面的宽度除以一个系数，把算出的这个值赋给html的font-size属性，rem换算值是根据psd设计图的宽度&#x2F;系数的rem系数。</li>
+</ol>
+<h5 id="11-如何解决margin塌陷？"><a href="#11-如何解决margin塌陷？" class="headerlink" title="11.如何解决margin塌陷？"></a>11.如何解决margin塌陷？</h5><ol>
+<li>父盒子设置border，添加border后父子盒子就不是真正意义上的贴合， 可以设置border透明色</li>
+<li>父盒子添加 overflow:hidden</li>
+<li>父盒子添加 padding</li>
+<li>父盒子添加 position：fixed</li>
+<li>父盒子添加 display：table</li>
+<li>利用伪元素给父元素的前面添加一个空元素</li>
+</ol>
+<h5 id="13-BFC是什么？"><a href="#13-BFC是什么？" class="headerlink" title="13.BFC是什么？"></a>13.BFC是什么？</h5><p>BFC直译为 “<strong>块级格式化上下文</strong>”。他是一个独立的渲染区域，只有 Block-level box 参与，它规定了内部的 Block-level Box 如何布局，并且与这个区域外部毫不相干。</p>
+<p>布局规则：</p>
+<ol>
+<li>内部的 Box 会在垂直方向，一个接一个的放置。</li>
+<li>Box 垂直方向的距离由 margin 决定。属于同一个 BFC 的两个相邻 Box 的margin 会发生重叠。</li>
+<li>每个元素的 margin box 的左边，与包含快 border box 的左边相接触（对于从左往右的格式化，否则相反）。即使存在浮动也是如此。</li>
+<li>BFC 的区域不会与 float box 重叠。</li>
+<li>BFC 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</li>
+<li>计算 BFC 的高度时，浮动元素也参与计算。</li>
+</ol>
+<p>哪些元素会生成 BFC：</p>
+<ol>
+<li>根元素</li>
+<li>float 属性不为 none</li>
+<li>position 为 absolute 或 fixed</li>
+<li>display 为 inline-block， table-cell， table-caption， flex， inline-flex </li>
+<li>overflow 不为 visible</li>
+</ol>
+<h4 id="JavaScript-基础"><a href="#JavaScript-基础" class="headerlink" title="JavaScript 基础"></a>JavaScript 基础</h4><h5 id="1-JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？"><a href="#1-JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？" class="headerlink" title="1.JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？"></a>1.JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？</h5><ol>
+<li>基本数据类型：Number、String、Boolean、null、undefined、Symbol（符号，ES6新增 ）、BigInt</li>
+<li>引用数据类型：Function、Object、Array</li>
+</ol>
+<p>区别：</p>
+<p>undefined：表示变量声明但未初始化时的值</p>
+<p>null：表示准备用来保存对象，还没有真正保存对象的值。从逻辑角度看，null值表示一个空对象指针</p>
+<p>ECMA标准要求null和undefined等值判断返回true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-如何判断JavaScript-的数据类型？"><a href="#2-如何判断JavaScript-的数据类型？" class="headerlink" title="2.如何判断JavaScript 的数据类型？"></a>2.如何判断JavaScript 的数据类型？</h5><ol>
+<li><strong>typeof</strong></li>
+</ol>
+<p><strong>typeof</strong> 可以用来区分除了 null 类型以外的原始数据类型，对象类型的可以从普通对象里面识别出函数</p>
+<ol start="2">
+<li><p><strong>instanceof</strong></p>
+<p>instanceof 不能用于判断原始数据类型的数据！</p>
+</li>
+</ol>
+<p>​        instanceof 可以用来判断对象的类型</p>
+<p>需要注意的是，instanceof 的结果并不是一定可靠的，可以在ES7中通过自定义 Symbol.hasInstance 方法覆盖</p>
+<ol start="3">
+<li><strong>Object.prototype.toString.call()</strong></li>
+</ol>
+<h5 id="3-简述创建函数的几种方式？"><a href="#3-简述创建函数的几种方式？" class="headerlink" title="3.简述创建函数的几种方式？"></a>3.简述创建函数的几种方式？</h5><ol>
+<li>函数声明</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">a,b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>函数表达式</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fn = <span class="keyword">function</span>(<span class="params">a,b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>函数对象方式 new一个</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fn = <span class="keyword">new</span> <span class="title class_">Function</span>(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;return a+b&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-JavaScript-创建对象的几种方式？"><a href="#4-JavaScript-创建对象的几种方式？" class="headerlink" title="4.JavaScript 创建对象的几种方式？"></a>4.JavaScript 创建对象的几种方式？</h5><ol>
+<li><p>字面量方式  推荐</p>
+</li>
+<li><p>用 Function 来模拟Class</p>
+</li>
+<li><p>使用工厂函数来创建 （Object关键字）</p>
+</li>
+<li><p>使用原型对象的方式 prototype 关键字</p>
+</li>
+<li><p>混合模式（原型和构造函数）</p>
+</li>
+<li><p>动态原型的方式（可以看作是混合模式的一种特例）</p>
+</li>
+</ol>
+<h5 id="6-和-的区别？"><a href="#6-和-的区别？" class="headerlink" title="6.&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 的区别？"></a>6.&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 的区别？</h5><p>&#x3D;&#x3D;&#x3D;：等同符，既要判断值也要判断类型是否相等。</p>
+<p>&#x3D;&#x3D;：等值符，两个等号只要值相等就可以。类型不同时会发生类型的自动转换，转换为相同的类型后作比较</p>
+<h5 id="7-null，undefined-的区别？"><a href="#7-null，undefined-的区别？" class="headerlink" title="7.null，undefined 的区别？"></a>7.null，undefined 的区别？</h5><p>null 表示一个对象被定义了，值为“空值”； undefined 表示不存在这个值；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">typeof</span> <span class="literal">undefined</span>   <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="attr">undefined</span>: 是一个表示 “无” 的原始值或者说表示 “缺少值”，就是此处应该有一个值，但还没有定义。</span><br><span class="line"></span><br><span class="line">当尝试读取时就会返回 <span class="literal">undefined</span> ，例如变量被声明了，但没有赋值时，就等于 <span class="literal">undefined</span>。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">// object</span></span><br><span class="line"></span><br><span class="line"><span class="attr">null</span>: 是一个对象（空对象，没有任何属性和方法）</span><br><span class="line">例如 作为函数的参数，表示该函数的参数不是对象； 在验证 <span class="literal">null</span> 时，一定要使用 ===</span><br></pre></td></tr></table></figure>
+
+<p>用法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/<span class="literal">undefined</span></span><br><span class="line"><span class="number">1.</span> 变量被声明了，但没有赋值时，就等于 <span class="literal">undefined</span></span><br><span class="line"><span class="number">2.</span> 调用函数时，应该提供的参数没有提供，该参数等于 <span class="literal">undefined</span></span><br><span class="line"><span class="number">3.</span> 对象没有赋值的属性，该属性的值为 <span class="literal">undefined</span></span><br><span class="line"><span class="number">4.</span> 函数没有返回值时，默认返回 <span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">/<span class="literal">null</span>  表示‘没有对象’，即该处不应该有值。</span><br><span class="line"><span class="number">1.</span> 作为函数的参数，表示该函数的参数不是对象</span><br><span class="line"><span class="number">2.</span> 作为对象原型链的终点</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="8-JavaScript-中什么情况下会返回-undefined-值？"><a href="#8-JavaScript-中什么情况下会返回-undefined-值？" class="headerlink" title="8.JavaScript 中什么情况下会返回 undefined 值？"></a>8.JavaScript 中什么情况下会返回 undefined 值？</h5><ol>
+<li><p>访问声明，但是没有初始化的变量</p>
+</li>
+<li><p>访问不存在的属性</p>
+</li>
+<li><p>访问函数的参数没有被显式的传递值</p>
+</li>
+<li><p>访问任何被设置为 undefined 值的变量</p>
+</li>
+<li><p>没有定义 return 的函数隐式返回</p>
+</li>
+<li><p>函数 return 没有显示的返回任何内容</p>
+</li>
+</ol>
+<h5 id="9-如何区分数组和对象？"><a href="#9-如何区分数组和对象？" class="headerlink" title="9.如何区分数组和对象？"></a>9.如何区分数组和对象？</h5><ol>
+<li>通过 es6 中的 Array.isArray 来识别</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>([])  <span class="comment">// true</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(&#123;&#125;)  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>通过 istanceof 来识别</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="title class_">Array</span>   <span class="comment">// true</span></span><br><span class="line">&#123;&#125; <span class="keyword">instanceof</span> <span class="title class_">Array</span>   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>通过调用 constructor 来识别</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;.<span class="property">constructor</span>  <span class="comment">// object</span></span><br><span class="line">[].<span class="property">constructor</span>  <span class="comment">// array</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>通过 object.prototype.toString.call 方法</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>([])  <span class="comment">// [&quot;object Array&quot;]</span></span><br><span class="line">object.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(&#123;&#125;)  <span class="comment">// [&quot;object Object&quot;]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="10-多维数组降维的几种方法？"><a href="#10-多维数组降维的几种方法？" class="headerlink" title="10.多维数组降维的几种方法？"></a>10.多维数组降维的几种方法？</h5><ol>
+<li>数组字符串化  split( ‘ ,’ )</li>
+<li>递归</li>
+<li>Array.prototype.flat()</li>
+<li>使用 stack 无限反嵌套多层嵌套数组</li>
+<li>使用 reduce、concat 和 递归无限反嵌套多层嵌套的数组</li>
+</ol>
+<h5 id="13-什么是类数组（伪数组），如何转换为真实的数组？"><a href="#13-什么是类数组（伪数组），如何转换为真实的数组？" class="headerlink" title="13.什么是类数组（伪数组），如何转换为真实的数组？"></a>13.什么是类数组（伪数组），如何转换为真实的数组？</h5><p>伪数组：无法直接调用数组方法或期望 length 属性有什么特殊的行为，不具有数组的 push、pop方法，但仍可以对它们进行遍历。典型的是函数 document.childnodes 之类的、<strong>dom.querySelectorAll</strong>等获取的NodeList类。</p>
+<ol>
+<li>具有 length 属性</li>
+<li>按索引方式存储数据</li>
+<li>不具有数组的 push、pop等方法</li>
+</ol>
+<p>伪数组—&gt; 真数组</p>
+<ol>
+<li>Array.from()    es6</li>
+<li>[].slice.call(eleArr) 或者  Array.prototype.slice.call(eleArr)</li>
+</ol>
+<h5 id="14-JavaScript中的作用域、预解析与变量声明提升？"><a href="#14-JavaScript中的作用域、预解析与变量声明提升？" class="headerlink" title="14.JavaScript中的作用域、预解析与变量声明提升？"></a>14.JavaScript中的作用域、预解析与变量声明提升？</h5><p><strong>作用域</strong></p>
+<p>就是变量的有效范围。 在一定的空间里可以对数据进行读写操作，这个空间就是数据的作用域</p>
+<ol>
+<li>全局作用域：最外层函数定义的变量拥有全局作用域，即对任何内部函数来说，都是可以访问的；</li>
+<li>局部作用域：局部作用域一般只在固定的代码片段内可访问到，函数外部是无法访问的，常见函数内部。</li>
+<li>块级作用域：凡是代码块就可以划分变量的作用域，这种作用域的规则就叫块级作用域</li>
+</ol>
+<p>块级作用域 函数作用域 词法作用域之间的区别？</p>
+<ol>
+<li>块级作用域和函数作用域描述的是， 什么东西可以划分变量的作用域</li>
+<li>词法作用域描述的是，变量的查找规则</li>
+</ol>
+<p><strong>预解析</strong></p>
+<p>Js 代码的执行是由浏览器中的 Js 解析器来执行的。Js 解析器执行 js代码的时候，分为两个过程：<strong>预解析过程</strong>和代<strong>码执行过程</strong>。</p>
+<p>预解析过程：</p>
+<p>1.把变量的声明提升到当前作用域的最前面，只会提升声明，不会提升赋值</p>
+<p>2.把函数的声明提升到当前作用域的最前面，只会提升声明，不会提升调用</p>
+<p>3.先提升 function，在提升 var</p>
+<p><strong>变量提升</strong></p>
+<p>变量提升：定义变量的时候，变量的声明会被提升到作用域的最上面，变量的赋值不会提升</p>
+<p>函数提升：Js 解析器首先会把当前作用域的函数声明提前到整个作用域的最前面</p>
+<p>变量声明提升：</p>
+<p>使用 var 关键字定义的变量，被称为变量声明；</p>
+<p>函数声明提升的特点是，在函数声明的前面，可以调用这个函数</p>
+<h5 id="15-变量提升与函数提升的区别？"><a href="#15-变量提升与函数提升的区别？" class="headerlink" title="15.变量提升与函数提升的区别？"></a>15.变量提升与函数提升的区别？</h5><p><strong>变量提升</strong></p>
+<p>在 js 代码执行前引擎会先进行预编译，预编译期间会将变量声明与函 数声明提升至其对应作用域的最顶端，函数内声明的变量只会提升至该函数作用域最顶层</p>
+<p>当函数内部定义的一个变量与外部相同时，那么函数体内的这个变量就会被上升到最顶端</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="comment">// 预编译后的代码结构可以看做如下运行顺序</span></span><br><span class="line"><span class="keyword">var</span> a; <span class="comment">// 将变量 a 的声明提升至最顶端， 赋值逻辑不提升。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// undefined</span></span><br><span class="line">a = <span class="number">3</span>; <span class="comment">// 代码执行到原位置即执行原赋值逻辑</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>函数提升</strong></p>
+<p>函数提升只会提升函数声明式写法，函数表达式的写法不存在函数提升</p>
+<p>函数提升的优先级大于变量提升的优先级，即函数提升在变量提升之上。</p>
+<h5 id="16-什么是作用域链？"><a href="#16-什么是作用域链？" class="headerlink" title="16.什么是作用域链？"></a>16.什么是作用域链？</h5><p>当代码在一个环境中执行时，会创建变量对象的一个作用域链</p>
+<p>由子级作用域链返回父级作用域中寻找变量，就叫做作用域链</p>
+<p>作用域的下一个变量对象来自包含环境，也叫外部环境。而再下一个变量对象则来自下一个包含环境，一直延续到全局执行环境。全局执行环境的变量对象始终都是作用域链中的最后一个对象。</p>
+<h5 id="17-如何延长作用域链？"><a href="#17-如何延长作用域链？" class="headerlink" title="17.如何延长作用域链？"></a>17.如何延长作用域链？</h5><ol>
+<li>try-catch 语句的 catch 块；会创建一个新的变量对象，包含的是被抛出的错误对对象的声明。</li>
+<li>wih 语句。with 语句会将指定的对象添加到作用域链中。</li>
+</ol>
+<h5 id="18-判断一个值是什么类型有哪些方法"><a href="#18-判断一个值是什么类型有哪些方法" class="headerlink" title="18.判断一个值是什么类型有哪些方法?"></a>18.判断一个值是什么类型有哪些方法?</h5><ol>
+<li><p>typeof 运算符</p>
+</li>
+<li><p>instanceof 运算符</p>
+</li>
+<li><p>Object.prototype.toString 方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> 只能区分基本类型 即 <span class="title class_">Number</span>、<span class="title class_">String</span>、<span class="literal">undefined</span>、<span class="title class_">Boolean</span>、<span class="title class_">Object</span>、<span class="title class_">Function</span>、<span class="title class_">Symbol</span>（es6新增的 七种）</span><br><span class="line"></span><br><span class="line">对于数组、<span class="literal">null</span>、对象来说，使用 <span class="keyword">typeof</span> 都会统一返回  object,  要使用 <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span> 来判断某个对象值属于那种内置类型</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="comment">//直接对一个数组调用 toString()</span></span><br><span class="line">arr.<span class="title function_">toString</span>();<span class="comment">// &quot;1,2&quot;</span></span><br><span class="line"><span class="comment">//通过 call 指定 arr 数组为 Object.prototype 对象中的 toString 方法的上下文</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(arr); <span class="comment">//&quot;[object Array]&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="WebAPI"><a href="#WebAPI" class="headerlink" title="WebAPI"></a>WebAPI</h4><h5 id="6-event对象的常见应用？"><a href="#6-event对象的常见应用？" class="headerlink" title="6.event对象的常见应用？"></a>6.event对象的常见应用？</h5><ol>
+<li>e.preventDefault() ; 阻止默认行为，阻止a链接默认的跳转行为</li>
+<li>e.stopPropagation() ; 阻止冒泡</li>
+<li>e.target</li>
+</ol>
+<h5 id="8-事件三要素"><a href="#8-事件三要素" class="headerlink" title="8.事件三要素"></a>8.事件三要素</h5><ol>
+<li>事件源</li>
+<li>事件类型</li>
+<li>事件处理函数</li>
+</ol>
+<h5 id="9-事件执行过程"><a href="#9-事件执行过程" class="headerlink" title="9.事件执行过程"></a>9.事件执行过程</h5><p>事件捕获过程：当我们点击 TEXT 时，首先是 window -&gt; document -&gt; body -&gt; div -&gt; text. 这个过程称为事件捕获，W3C浏览器的标准执行流程。</p>
+<p>事件冒泡过程：text -&gt; div -&gt; body -&gt; document -&gt; window. 这个过程称为事件冒泡。ie浏览器只支持冒泡，不支持捕获。W3C浏览器先执行捕获，后执行冒泡。</p>
+<h5 id="10-谈谈事件委托的理解？"><a href="#10-谈谈事件委托的理解？" class="headerlink" title="10.谈谈事件委托的理解？"></a>10.谈谈事件委托的理解？</h5><p>js事件代理则是一种简单的技巧，把事件处理器添加到一个上级元素上，这样就避免了把事件处理器添加到多个子级元素上。这主要得益于浏览器的事件冒泡机制。</p>
+<p>优点：</p>
+<ol>
+<li>减少事件注册，节省内存。</li>
+<li>在table上代理所有的td的click事件。</li>
+<li>在ul上代理所有 li 的 click 事件。</li>
+<li>简化了 dom 节点更新时，相应事件的更新。</li>
+<li>不用在新添加的 li 上绑定 click 事件。</li>
+<li>当删除某个 li 时，不用解绑上面的 click 事件。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>事件委托基于冒泡，对于不冒泡的事件不支持。</li>
+<li>层级过多，冒泡过程中，可能会被某层阻止掉。</li>
+<li>理论上委托会导致浏览器频繁调用处理函数，虽然可能不需要处理。所以建议就近委托。</li>
+<li>把所有事件都用代理就可能会出现事件误判。</li>
+</ol>
+<h5 id="11-JavaScript-中定时器有哪些？区别及用法是什么？"><a href="#11-JavaScript-中定时器有哪些？区别及用法是什么？" class="headerlink" title="11.JavaScript 中定时器有哪些？区别及用法是什么？"></a>11.JavaScript 中定时器有哪些？区别及用法是什么？</h5><ol>
+<li>setTimeout( )  ：方法用于在指定的毫秒数后调用函数或计算表达式。也叫定时器。</li>
+<li>setInterval( ) ：方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。也叫计时器。</li>
+</ol>
+<p>setInterval() 方法会不停的调用函数，直到 clearInterval() 被调用或窗口被关闭。由setInterval()返回的ID值可用作 clearInterval() 方法的参数。</p>
+<h5 id="13-JS拖动的原理？"><a href="#13-JS拖动的原理？" class="headerlink" title="13.JS拖动的原理？"></a>13.JS拖动的原理？</h5><p>js的拖拽效果主要用到以下三个事件：</p>
+<p>mousedown 鼠标按下事件</p>
+<p>mousemove 鼠标移动事件</p>
+<p>mouseup 鼠标抬起事件</p>
+<p>当点击dom的时候，记录当前鼠标的坐标值，也就是x，值，以及被拖拽的dom的top、left值，而且还要在鼠标按下的回调函数回调函数里添加鼠标移动的事件 mousemove 和添加鼠标抬起的事件 mouseup</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot; mousemove&quot;</span>, moving, <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot; mouseup&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">removeEventListener</span>(<span class="string">&quot; mousemove&quot;</span>, moving, <span class="literal">false</span>);</span><br><span class="line">&#125;,<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这个抬起的事件是为了解除鼠标移动的监听，因为只有在鼠标按下才可以拖拽，抬起就不会移动了。</p>
+<p>当鼠标按下鼠标移动的时候，记录移动中的 x,y值，那么这个被拖拽的dom的top、left值就是：</p>
+<p>top &#x3D; 鼠标按下时记录的dom的 top 值 + （移动中的 y 值 - 鼠标按下时的 y 值）</p>
+<p>left &#x3D; 鼠标按下时记录的 left 值 + （移动中的 x 值 - 鼠标按下时的 x 值）</p>
+<h5 id="14-简述浏览器的渲染过程，DOM树和渲染树的区别？"><a href="#14-简述浏览器的渲染过程，DOM树和渲染树的区别？" class="headerlink" title="14.简述浏览器的渲染过程，DOM树和渲染树的区别？"></a>14.简述浏览器的渲染过程，DOM树和渲染树的区别？</h5><ol>
+<li>浏览器的渲染过程：<ol>
+<li>解析 HTML 构建DOM（DOM树），并行请求 css&#x2F;image&#x2F;js</li>
+<li>CSS文件下载完成，开始构建 css树</li>
+<li>css树构建结束后， 和 DOM一起生成 Render Tree（渲染树）</li>
+<li>布局：计算出每个节点在屏幕中的位置</li>
+<li>显示：通过显卡把页面画到屏幕上</li>
+</ol>
+</li>
+<li>DOM树和渲染树的区别：<ol>
+<li>DOM树与 HTML 标签一一对应，包括head和隐藏元素</li>
+<li>渲染树不包括head和隐藏元素，大段文本的每一个行都是独立节点，每一个节点都有对应的css属性</li>
+</ol>
+</li>
+</ol>
+<h5 id="15-如何最小化重绘和回流？"><a href="#15-如何最小化重绘和回流？" class="headerlink" title="15.如何最小化重绘和回流？"></a>15.如何最小化重绘和回流？</h5><p>重绘：当元素的一部分属性发生改变，如外观、背景、颜色等不会引起布局变化，只需要浏览器根据元素的新属性重新绘制，使元素呈现新的外观叫做重绘。</p>
+<p>重排（回流）：当render树中的一部分或者全部因为大小边距等问题发生改变而需要DOM树重新计算的过程</p>
+<p><strong>重绘不一定需要重排（比如颜色的改变），重排必然导致重绘（比如改变网页位置）</strong></p>
+<p>方法：</p>
+<ol>
+<li><p>需要对元素进行复杂的操作时，可以先隐藏（display：none），操作完成后再显示</p>
+</li>
+<li><p>需要创建多个DOM节点时，使用 DocumentFragment创建完后一次性加入document缓存Layout属性值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> left = elem.<span class="property">offsetLeft</span>;    <span class="comment">// 这样，多次使用left只产生一次回流</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尽量避免用table布局（会引起回流）</p>
+</li>
+<li><p>避免使用css表达式，因为每次调用都会重新计算值（包括加载页面）</p>
+</li>
+<li><p>尽量使用 css 属性简写</p>
+</li>
+<li><p>批量修改元素样式</p>
+</li>
+</ol>
+<h5 id="16-JS延迟加载的方式有哪些？"><a href="#16-JS延迟加载的方式有哪些？" class="headerlink" title="16.JS延迟加载的方式有哪些？"></a>16.JS延迟加载的方式有哪些？</h5><ol>
+<li><p><strong>defer</strong> 属性</p>
+<p>用途：表明脚本在执行时不会影响页面的构造。脚本会被延迟到整个页面都解析完毕之后再执行</p>
+<p>在 <script> 元素中设置 <defer> 属性，等同告诉浏览器立即下载，但延迟执行!</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;text1.js&quot;</span> <span class="attr">defer</span>=<span class="string">&quot;defer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;text2.js&quot;</span> <span class="attr">defer</span>=<span class="string">&quot;defer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>说明：虽然 <script> 元素放在了 <head> 元素中，但包含的脚本将延迟浏览器遇到 </html>标签后执行</p>
+<p>延迟脚本并不一定会按照顺序执行  defer 属性只适用于外部脚本</p>
+</li>
+<li><p><strong>async</strong> 属性</p>
+<p>html5为 <script> 标签定义了 async 属性，用于改变处理脚本的行为。 只适用于外部脚本文件。</p>
+<p>目的：不让页面等待脚本下载和执行，从而异步加载页面其他内容。异步脚本一定会在页面load事件前执行。不能保证脚本会按顺序执行。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;text1.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;text2.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>async和defer一样，都不会阻塞其他资源下载，所有不会影响页面的加载。</p>
+<p>缺点：不能控制加载的顺序。</p>
+</li>
+<li><p>动态创建 DOM 方式</p>
+</li>
+<li><p>使用 jQuery的getScript（）方法</p>
+</li>
+<li><p>使用 setTimeout 延迟方法的加载时间 延迟加载js代码，给网页加载留出更多时间</p>
+</li>
+<li><p>让js最后加载</p>
+</li>
+</ol>
+<h4 id="JavaScript-高级"><a href="#JavaScript-高级" class="headerlink" title="JavaScript 高级"></a>JavaScript 高级</h4><h5 id="1-typeof-和-instanceof-区别？"><a href="#1-typeof-和-instanceof-区别？" class="headerlink" title="1.typeof 和 instanceof 区别？"></a>1.typeof 和 instanceof 区别？</h5><p>在js中，判断一个变量的类型可以用 typeof</p>
+<ol>
+<li>数字类型，typeof 返回的值是number</li>
+<li>字符串类型，typeof 返回的值是 string</li>
+<li>布尔类型，typeof 返回的值是 boolean</li>
+<li>对象、数组、null 返回的值是 object</li>
+<li>不存在的变量、函数或者undefined，将返回 undefined</li>
+<li>使用 typeod 运算符无论引用的是什么类型的对象，它都返回 object</li>
+<li>运算符 instanceof 来解决这个问题。用于判断某个对象是否被另一个函数构造</li>
+</ol>
+<h5 id="2-js使用typeof能得到的哪些类型？"><a href="#2-js使用typeof能得到的哪些类型？" class="headerlink" title="2.js使用typeof能得到的哪些类型？"></a>2.js使用typeof能得到的哪些类型？</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//typeof只能区分值类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>  <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>       <span class="comment">// object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="variable language_">console</span>.<span class="property">log</span> <span class="comment">// function</span></span><br><span class="line">typ]eof <span class="title class_">NaN</span>       <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-什么是闭包？"><a href="#4-什么是闭包？" class="headerlink" title="4.什么是闭包？"></a>4.什么是闭包？</h5><p><strong>定义：</strong></p>
+<p> 一个作用域可以访问到另外一个函数内部的局部变量，或者说一个函数（子函数）访问另一个函数（父函数）中的变量。此时就会产生闭包，那么这个变量所在的函数我们就称之为闭包函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">aaa</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(a++)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> fun = <span class="title function_">aaa</span>()</span><br><span class="line"><span class="title function_">fun</span>()              <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>优缺点：</strong></p>
+<p>闭包的主要作用：延伸了变量的作用范围，因为闭包函数中的局变量不会等着闭包函数执行完就销毁，因为还有别的函数要调用它，只有等着所有的函数都调用完了它才会销毁。</p>
+<p>闭包会造成内存泄露，如何解决：用完之后手动是释放。</p>
+<p><strong>详解：</strong></p>
+<p>闭包不仅仅可以实现函数内部的作用域访问这个函数中的局部变量，还可以实现全局作用域或者别的地方的作用域也可以访问到函数内部的局部变量，实现方法就是 return 了一个函数。</p>
+<p>所以 return 函数也是我们实现闭包的一个主要原理，因为返回的这个函数本身就是我们 fn 函数内部的一个子函数，所以子函数是可以访问父函数里面的局部变量的，所以返回完毕之后，外面的函数一调用，就会回头调用返回的这个函数，所以就可以拿到这个子函数对应的父函数里面的局部变量。</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>由于闭包会使得函数中的变量都被保存在内存中，内存消耗詪大，所以不能滥用闭包，否则会造成网页的性能问题。</li>
+<li>闭包会在父函数外部，改变父函数内部变量的值。</li>
+</ol>
+<h5 id="5-什么是内存泄漏？"><a href="#5-什么是内存泄漏？" class="headerlink" title="5.什么是内存泄漏？"></a>5.什么是内存泄漏？</h5><p>内存泄漏也称为“ 存储泄漏 ”，用动态存储分配函数动态开辟的空间，在使用完毕后未释放，结果导致一直占据该内存单元。直到程序结束。</p>
+<p>其实说白了就是该内存空间使用完毕之后未回收，导致内存泄漏。</p>
+<h5 id="6-哪些操作会造成内存泄漏？"><a href="#6-哪些操作会造成内存泄漏？" class="headerlink" title="6.哪些操作会造成内存泄漏？"></a>6.哪些操作会造成内存泄漏？</h5><ol>
+<li>setTimeout 的第一个参数使用字符串而非函数的话，会造成内存泄漏。</li>
+<li>闭包、控制台日志、循环</li>
+<li>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为0，或对该对象的唯一引用是循环的，那么该对象的内存即可回收。</li>
+</ol>
+<h5 id="7-说说你对原型prototype的理解"><a href="#7-说说你对原型prototype的理解" class="headerlink" title="7.说说你对原型prototype的理解"></a>7.说说你对原型prototype的理解</h5><p>在js中，原型也是一个对象，通过原型可以实现对象的属性继承，JS的函数对象中都包含了一个 prototype 内部属性，这个属性所对应的就是该函数对象的原型。</p>
+<p>prototype 作为函数对象的内部属性，是不能被直接访问的。</p>
+<p>原型的主要作用就是实现继承与扩展对象。</p>
+<h5 id="8-介绍下原型链？"><a href="#8-介绍下原型链？" class="headerlink" title="8.介绍下原型链？"></a>8.介绍下原型链？</h5><p>js原型：每个对象都会在其内部初始化一个属性，就是 prototype （原型）</p>
+<p><strong>原型链：</strong></p>
+<p>当访问一个对象的某个属性时，会先在这个对象本身属性上查找，如果没有找到，则会去它的 <strong>_  _proto  _ _</strong></p>
+<p>隐式原型上查找，即它的构造函数的<strong>prototype</strong>，如果还没有找到就会再在构造函数的prototype的**_  _proto  _ _**中查找，这样一层一层向上查找就会形成一个链式结构，我们称为原型链。</p>
+<p>当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+<h5 id="9-常见的js中继承的方式？"><a href="#9-常见的js中继承的方式？" class="headerlink" title="9.常见的js中继承的方式？"></a>9.常见的js中继承的方式？</h5><ol>
+<li>原型链继承</li>
+<li>构造函数继承</li>
+<li>组合继承</li>
+<li>原型式继承</li>
+<li>寄生式继承</li>
+<li>寄生组合式继承</li>
+<li>es6中class实现继承</li>
+</ol>
+<h5 id="10-介绍this各种情况"><a href="#10-介绍this各种情况" class="headerlink" title="10.介绍this各种情况"></a>10.介绍this各种情况</h5><ol>
+<li>以函数形式调用时，this 永远都是 window</li>
+<li>以方法的形式调用时，this 是调用方法的对象</li>
+<li>以构造函数的形式调用时，this 是新创建的那个实例对象</li>
+<li>使用 call 和 apply 调用时，this 是指定的那个对象</li>
+<li>箭头函数：箭头函数的 this 看外层是否有函数，如果有，外层函数的this就是内部箭头函数的this，如果没有，就是window</li>
+<li>特殊情况：通常意义上 this 指针指向为最后调用它的对象。这里需要注意的一点就是如果返回值是一个对象，那么 this 指向的就是那个返回的对象，如果返回值不是一个对象那么this 还是指向函数的实例</li>
+</ol>
+<h5 id="11-forEach-和-map-的区别？"><a href="#11-forEach-和-map-的区别？" class="headerlink" title="11.forEach 和 map 的区别？"></a>11.forEach 和 map 的区别？</h5><p>相同点：都是循环遍历数组中的每一项。</p>
+<p>forEach 和 map 方法里每次执行匿名函数都支持3个参数，参数分别是 item，index，arr（原数组）</p>
+<p>匿名函数中的this都是指向window 只能遍历数组 都不会改变原数组</p>
+<p>map方法：</p>
+<ol>
+<li>返回一个新数组，数组中的元素为原始数组调用函数处理后的值</li>
+<li>map方法不会对空数组进行检测，map方法不会改变原始数</li>
+</ol>
+<p>forEach方法：</p>
+<ol>
+<li>foreach方法用来调用数组的每个元素，将元素传给回调函数</li>
+<li>foreach对于空数组就不会调用回调函数的。</li>
+</ol>
+<h5 id="12-for-in-和-for-of-的区别？"><a href="#12-for-in-和-for-of-的区别？" class="headerlink" title="12.for in 和 for of 的区别？"></a>12.for in 和 for of 的区别？</h5><ol>
+<li>推荐在循环对象属性的时候使用 for...in，在遍历数组的时候使用 for...of</li>
+<li>for...in 循环的是 key，for...of 循环的是 value</li>
+<li>注意，for...of 是ES6新引入的特性。修复了ES5引入的for...in 的不足</li>
+<li>for...of 不能循环普通的对象，需要通过和 Object.keys()搭配使用</li>
+</ol>
+<h5 id="13-call、apply、bind-的区别？"><a href="#13-call、apply、bind-的区别？" class="headerlink" title="13.call、apply、bind 的区别？"></a>13.call、apply、bind 的区别？</h5><p>共同点：</p>
+<ol>
+<li>都是用来改变函数的 this 对象的指向的。</li>
+<li>第一个参数都是 this 要指向的对象。</li>
+<li>都可以利用后续参数传参。</li>
+</ol>
+<p><strong>call</strong> 方法调用一个函数，其具有一个指定的 this 值分别地提供的参数（参数的列表）</p>
+<p><strong>call</strong> 方法的作用和 <strong>apply（）</strong>方法类似区别就是 </p>
+<p>call() 方法接受的是参数列表</p>
+<p>apply（）方法接收的是一个参数数组。</p>
+<p>bind（）方法创建一个新的函数，当这个新的函数被调用时，其 this 值为提供的值，其参数列表前几项，置为创建时指定的参数列表。</p>
+<h5 id="14-EventLoop事件循环机制"><a href="#14-EventLoop事件循环机制" class="headerlink" title="14.EventLoop事件循环机制"></a>14.EventLoop事件循环机制</h5><p>JS的事件分两种，宏任务和微任务。</p>
+<p>宏任务：包括整体代码script，setTimeout，setInterval</p>
+<p>微任务：	Promise.then(非 new Promise：同步的)，process，nextTick（node中 ）</p>
+<p>事件的执行顺序——先执行宏任务，然后执行微任务，任务有同步的任务和异步的任务，同步的进入主线程，异步的进入 Event Table 并注册函数，异步事件完成后，会将回调函数放在队列中，如果还有异步的宏任务，那么就会进行循环执行上述的操作。</p>
+<h5 id="15-js-防抖和节流"><a href="#15-js-防抖和节流" class="headerlink" title="15.js 防抖和节流"></a>15.js 防抖和节流</h5><p>在进行窗口的 resize、scroll，输入框内容校验等操作时，如果事件处理函数的频率无限制，会加重浏览器的负担，导致用户的体验不好。此时可以使用防抖和节流来减少使用频率，同时又不影响实际结果。</p>
+<p><strong>防抖（debounce）</strong>：</p>
+<p>当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了事件，就重新开始延时。</p>
+<p><strong>节流（throttle）</strong>：</p>
+<p>当持续触发事件时，保证一定时间内只调用一次事件处理函数</p>
+<p>比如持续触发scroll事件时，并不立即执行handle函数，每隔1000ms才会执行一次。就比如水龙头，最好是按照一定规律在某个时间间隔内一滴一滴的往下滴。</p>
+<p>总结：</p>
+<p><strong>函数防抖</strong>：将几次操作合并为一此操作进行。原理是维护一个计时器，规定在延迟时间后触发函数，但是在延迟时间内再次触发的话，机会取消之前的计时器而重新设置。只有最后一次操作能被触发。</p>
+<p><strong>函数节流</strong>：使得一定时间内只触发一次函数。原理是通过判断是否到达一定时间来触发函数。</p>
+<p>区别：</p>
+<p>函数节流不管事件触发有多频繁，都会保证在规定时间内一定会执行一次真正的事件处理函数，</p>
+<p>而函数防抖只是在最后一次事件后才触发一次函数。</p>
+<p>应用场景：</p>
+<p>防抖：</p>
+<ol>
+<li>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。</li>
+<li>window 触发 resize 的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖 来让其只触发一次</li>
+</ol>
+<p>节流：</p>
+<ol>
+<li>鼠标不断点击触发，mousedown （单位时间内只触发一次）</li>
+<li>监听滚动事件，比如是否滑倒底部自动加载更多，用 throttle 来判断 ；</li>
+</ol>
+<h5 id="16-new-操作符具体干了什么呢？"><a href="#16-new-操作符具体干了什么呢？" class="headerlink" title="16.new 操作符具体干了什么呢？"></a>16.new 操作符具体干了什么呢？</h5><ol>
+<li>创建一个空的对象，并且 this 变量引入该对象，同时还继承了函数的原型</li>
+<li>设置原型链   空对象指向构造函数的原型对象</li>
+<li>执行函数体   修改构造函数 this 指针指向空对象，并执行函数体</li>
+<li>判断返回值   返回对象就用该对象，没有的话就创建一个对象</li>
+</ol>
+<h5 id="19-split-和-join-的区别？"><a href="#19-split-和-join-的区别？" class="headerlink" title="19.split( ) 和 join( ) 的区别？"></a>19.split( ) 和 join( ) 的区别？</h5><p>split（）是把一串字符（根据某个分隔符）分成若干个元素存放在一个数组里，即切割成数组的形式</p>
+<p>join（） 是把数组中的字符串连成一个长串，可以大体上认为是 split（）的逆操作</p>
+<h5 id="21-谈谈你对-JS-垃圾回收机制的理解？"><a href="#21-谈谈你对-JS-垃圾回收机制的理解？" class="headerlink" title="21.谈谈你对 JS 垃圾回收机制的理解？"></a>21.谈谈你对 JS 垃圾回收机制的理解？</h5><ol>
+<li>标记清除法</li>
+<li>引用计数法</li>
+</ol>
+<h5 id="22-JS-里垃圾回收机制是什么，常用的是哪种，怎么处理的？"><a href="#22-JS-里垃圾回收机制是什么，常用的是哪种，怎么处理的？" class="headerlink" title="22.JS 里垃圾回收机制是什么，常用的是哪种，怎么处理的？"></a>22.JS 里垃圾回收机制是什么，常用的是哪种，怎么处理的？</h5><p>JS的垃圾回收机制是为了以防内存泄漏，内存泄漏的含义就是当已经不需要某块内存时这块内存还存在着，垃圾回收机制就是间歇的不定期的寻找到不再使用的变量，并释放掉它们所指向的内存。</p>
+<p>JS 最常见的垃圾回收方式是标记清除</p>
+<p>工作原理：是当变量进入环境时，将这个变量标记为 “ 进入环境 ” 。 当变量离开环境的时候，则将其标记为 “ 离开环境  ” 。标记 离开环境 就回收内存。</p>
+<p>工作流程：</p>
+<ol>
+<li>垃圾回收器，在运行的时候会给存储在内存中的所有变量都加上标记</li>
+<li>去掉环境中的变量以及破环环境中的变量引用的变量的标记</li>
+<li>再被加上标记的会被视为准备删除的变量</li>
+<li>垃圾回收器完成内存清除工作，销毁按那些带标记的值并回收他们所占用的内存空间</li>
+</ol>
+<h5 id="23-什么是任务队列？"><a href="#23-什么是任务队列？" class="headerlink" title="23.什么是任务队列？"></a>23.什么是任务队列？</h5><p>任务队列主要分两种：</p>
+<ol>
+<li><p>宏任务</p>
+<p>script（整体代码）、setTimeout、setInterval、..</p>
+</li>
+<li><p>微任务</p>
+<p>process.nextTick、Promise、</p>
+</li>
+</ol>
+<p>同步任务：在主线程上，排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务</p>
+<p>异步任务：不进入主线程，而进入“ 任务队列 ”的任务，只有 “ 任务队列 ” 通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。</p>
+<h4 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h4><h5 id="1-echarts-的基本用法？"><a href="#1-echarts-的基本用法？" class="headerlink" title="1.echarts 的基本用法？"></a>1.echarts 的基本用法？</h5><ol>
+<li><p>初始化类</p>
+<p>创建一个id为box的div，并初始化echarts 绘图实例   </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myChat = echarts.<span class="title function_">init</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>样式配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title</span>: 标题</span><br><span class="line"><span class="attr">tooltip</span>: 鼠标悬停气泡</span><br><span class="line"><span class="attr">xAxis</span>: 配置横轴类别</span><br><span class="line"><span class="attr">series</span>: 销量数据，data 参数与横轴一一对应</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>渲染图展示表</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myChart.<span class="title function_">setOption</span>(option)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="2-如何使用-echarts？"><a href="#2-如何使用-echarts？" class="headerlink" title="2.如何使用 echarts？"></a>2.如何使用 echarts？</h5><ol>
+<li>获取 echarts ：在官网下载 echarts 版本 或 npm 下载</li>
+<li>引入 echarts ：script 引入 或者 vue 在入口文件里引用</li>
+<li>创建一个 dom 元素  用来放置图表</li>
+<li>配置 echarts 属性</li>
+</ol>
+<h4 id="Ajax-计算机网络"><a href="#Ajax-计算机网络" class="headerlink" title="Ajax/计算机网络"></a>Ajax/计算机网络</h4><h5 id="1-什么是Ajax，Ajax的原理，Ajax都有哪些优点和缺点？"><a href="#1-什么是Ajax，Ajax的原理，Ajax都有哪些优点和缺点？" class="headerlink" title="1.什么是Ajax，Ajax的原理，Ajax都有哪些优点和缺点？"></a>1.什么是Ajax，Ajax的原理，Ajax都有哪些优点和缺点？</h5><p>什么是Ajax？</p>
+<p>它是一种创建交互式网页应用的网页开技术。沟通客户端与服务器，可以在不必刷新整个浏览器的情况下，与服务器进行异步通讯的技术。</p>
+<p>Ajax的原理？</p>
+<p>通过xhr对象来向服务器发送异步请求，从服务器获得数据。xhr是Ajax的核心机制。简单的说，也就是js可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果。</p>
+<p>Ajax的优点？</p>
+<ol>
+<li>最大的一点是页面无刷新，用户体验非常好</li>
+<li>使用异步方式与服务器通信，具有更加迅速的响应能力</li>
+<li>Ajax的原则是 “ 按需取数据 ” ，可以最大层度上减少冗余请求，和响应服务器造成的负担</li>
+</ol>
+<h5 id="2-常见的-HTTP-状态码以及代表的意义？"><a href="#2-常见的-HTTP-状态码以及代表的意义？" class="headerlink" title="2.常见的 HTTP 状态码以及代表的意义？"></a>2.常见的 HTTP 状态码以及代表的意义？</h5><p>200（OK）：请求已成功，请求所希望的响应头或数据体将随此响应返回。</p>
+<p>400：请求格式错误</p>
+<p>404：请求失败，请求所希望得到的资源未在服务器上发现</p>
+<p>500：服务器遇到了一个未曾预料的抓状况，导致了它无法完成对i请求的处理</p>
+<p>401：未认证，没有网站登录</p>
+<h5 id="3-Ajax的实现流程"><a href="#3-Ajax的实现流程" class="headerlink" title="3.Ajax的实现流程"></a>3.Ajax的实现流程</h5><ol>
+<li>创建xhr对象，也就是创建一个异步调用对象</li>
+<li>创建一个新的HTTP请求，并指定该HTTP请求的方法、URL及验证信息</li>
+<li>设置响应HTTP请求状态变化的函数</li>
+<li>发送HTTP请求</li>
+<li>获取异步调用返回的数据</li>
+<li>使用 js 和 dom 实现局部刷新</li>
+</ol>
+<h5 id="4-Ajax接收到的数据类型有哪些，数据如何处理？"><a href="#4-Ajax接收到的数据类型有哪些，数据如何处理？" class="headerlink" title="4.Ajax接收到的数据类型有哪些，数据如何处理？"></a>4.Ajax接收到的数据类型有哪些，数据如何处理？</h5><p>String / JSON字符串 / 二进制流数据</p>
+<p>JSON字符串反序列化后，转成引用类型使用</p>
+<p>String 直接使用</p>
+<p>前端用Blob转换</p>
+<p><strong>如何处理数据？</strong></p>
+<p>字符串转对象   <strong>JSON.parse（）</strong>  json格式的data数据转换成对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data =<span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">     &quot;student&quot; : [</span></span><br><span class="line"><span class="string">          &#123;&quot;name&quot;:&quot; 张 三 &quot;,&quot;age&quot;:&quot;11&quot;&#125;,</span></span><br><span class="line"><span class="string">          &#123;&quot;name&quot;:&quot; 李 四&quot;,&quot;age&quot;:&quot;11&quot;&#125;,</span></span><br><span class="line"><span class="string">          &#123;&quot;name&quot;:&quot; 王 五&quot;,&quot;age&quot;:&quot;11&quot;&#125;]</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br><span class="line"><span class="title class_">JSON</span>.<span class="title function_">parse</span>(data)</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="5-请解释一下js的同源策略"><a href="#5-请解释一下js的同源策略" class="headerlink" title="5.请解释一下js的同源策略"></a>5.请解释一下js的同源策略</h5><p>同源策略是客户端脚本的重要的安全度量标准。目的是防止某个文档或脚本从多个不同源装载。</p>
+<p>同源是指：协议、域名、端口相同，同源策略是一种安全协议，指一段脚本只能读取来自同一来源的窗口和文档的属性。</p>
+<h5 id="6-为什么会有跨域的问题出现，如何解决跨域问题？"><a href="#6-为什么会有跨域的问题出现，如何解决跨域问题？" class="headerlink" title="6.为什么会有跨域的问题出现，如何解决跨域问题？"></a>6.为什么会有跨域的问题出现，如何解决跨域问题？</h5><p><strong>什么是跨域？</strong></p>
+<p>指的是浏览器不能执行其他网站的脚本，它是由浏览器的同源策略造成的，是浏览器对js施加的安全限制，防止他人恶意攻击网站。</p>
+<p><strong>解决跨域</strong></p>
+<ol>
+<li><p>jsonp：动态创建一个 script 标签，利用script标签的 src 属性不受同源策略限制。</p>
+</li>
+<li><p>CORS：跨域资源共享</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cors原理：服务器设置 <span class="title class_">Access</span>-<span class="title class_">Control</span>-<span class="title class_">Allow</span>-<span class="title class_">OriginHTTP</span> 响应头之后，浏览器将会允许跨域请求</span><br><span class="line">限制：浏览器需要支持 <span class="title class_">HTML5</span>，可以支持 <span class="variable constant_">POST</span>、<span class="variable constant_">PUT</span> 等方法兼容ie9以上需要后台设置</span><br><span class="line"></span><br><span class="line"><span class="title class_">Access</span>-<span class="title class_">Control</span>-<span class="title class_">Allow</span>-<span class="title class_">Origin</span>: *    <span class="comment">// 允许所有域名访问</span></span><br><span class="line"><span class="title class_">Access</span>-<span class="title class_">Control</span>-<span class="title class_">Allow</span>-<span class="title class_">Origin</span>: <span class="attr">HTTP</span>:<span class="comment">//a.com   // 只允许所有域名访问</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>反向代理</p>
+</li>
+<li><p>window + iframe</p>
+</li>
+</ol>
+<h5 id="7-Get-和-Post-的区别以及使用场景"><a href="#7-Get-和-Post-的区别以及使用场景" class="headerlink" title="7.Get 和 Post 的区别以及使用场景"></a>7.Get 和 Post 的区别以及使用场景</h5><p>区别：</p>
+<ol>
+<li>Get 使用 url 或 Cookie 传参。而 Post 将数据放在body中</li>
+<li>Get 的 url 会有长度上的限制，而 Post 的数据则可以非常大</li>
+<li>Post 比 Get 更安全，因为数据在地址栏上不可见</li>
+</ol>
+<p>最本质的区别：基于http协议进行请求的，其实get和post无区别，只是请求的方式不同，都可以携带请求体，也可以在 url 带参数。</p>
+<p>使用场景：</p>
+<ol>
+<li>使用post<ol>
+<li>请求的结果有持续性的作用，例如 数据库内添加新的数据行</li>
+<li>若使用 get 方法，则表单上收集的数据可能让url过长</li>
+<li>要传送的数据不是采用 ASCII 编码</li>
+</ol>
+</li>
+<li>使用get<ol>
+<li>请求是为了查找资源，html表单数据仅用来搜索</li>
+<li>请求结果无持续性的副作用</li>
+<li>收集的数据及html表单内的输入字段名称的总长度不超过1024个字符</li>
+</ol>
+</li>
+</ol>
+<h5 id="8-解释-jsonp-的原理"><a href="#8-解释-jsonp-的原理" class="headerlink" title="8.解释 jsonp 的原理"></a>8.解释 jsonp 的原理</h5><p>什么是jsonp，jsonp的作用？</p>
+<p>jsonp并不是一种数据格式，而 json 是一种数据格式， jsonp 是用来解决跨域获取数据的一种解决方案。</p>
+<p><strong>具体原理</strong></p>
+<p>是通过动态创建 script 标签，然后通过标签的 src 属性获取 js 文件中的 js 脚本，该脚本的内容是一个函数调用，参数就是服务器返回的数据，为了处理这些返回的数据，需要事先在页面定义好回调函数，本质上使用的并不是ajax 技术，Ajax 请求受同源策略的影响，不允许进行跨域请求， 而 script 标签的 src 属性中的链接却可以访问跨域的 js 脚本，利用这个特性，服务端不在返回 json 格式的数据，而是返回调用某个函数的 js 代码，在 src 中进行了调用，这样就实现了跨域。</p>
+<h5 id="9-封装好的-Ajax-里的常见参数及其代表的含义"><a href="#9-封装好的-Ajax-里的常见参数及其代表的含义" class="headerlink" title="9.封装好的 Ajax 里的常见参数及其代表的含义"></a>9.封装好的 Ajax 里的常见参数及其代表的含义</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">url：发送请求的地址</span><br><span class="line">type：请求方式，默认为get</span><br><span class="line">async：同步异步请求，默认true 所有请求均为异步请求</span><br><span class="line">timeout：超时时间设置，单位毫秒</span><br><span class="line">data：要求为 Object 或 String 类型的参数，发送到服务器的数据</span><br><span class="line">cache：默认为true，设置为false将不会从浏览器缓存中加载请求信息</span><br><span class="line">dataType：预期服务器返回的数据类型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="10-HTTP-与-HTTPS-的区别？"><a href="#10-HTTP-与-HTTPS-的区别？" class="headerlink" title="10.HTTP 与 HTTPS 的区别？"></a>10.HTTP 与 HTTPS 的区别？</h5><ol>
+<li>https 协议需要到CA申请证书，一般免费证书较少，因而需要一定的费用。</li>
+<li>http 是超文本传输协议，信息是明文传输，https 则是具有安全性的 ssl 加密传输协议</li>
+<li>http 和 https 使用的是完全不同的连接方式，用的端口也不一样，前者是 80 ， 后者是 443</li>
+<li>http 的连接很简单，是无状态的。https 协议是由 sll + http 协议构建的可进行加密传输、身份认证的网络协议，比 http 协议安全。</li>
+</ol>
+<h5 id="11-localStorage、sessionStorage、cookie-的区别？"><a href="#11-localStorage、sessionStorage、cookie-的区别？" class="headerlink" title="11.localStorage、sessionStorage、cookie 的区别？"></a>11.localStorage、sessionStorage、cookie 的区别？</h5><p>共同点：都是保存在浏览器、且同源的</p>
+<p>区别：</p>
+<ol>
+<li>cookie 数据始终在同源的 http 请求中携带，即使不需要，即cookie在浏览器和服务器间来回传递，而 sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在本地保存。cookie数据还有路径path的概念，可以限制cookie只属于某个路径下。</li>
+<li>存储大小限制也不同，cookie 数据不能超过4K，同时因为每次 http 请求都会携带 cookie、所以 cookie 只适合保存很小的数据。sessionStorage 和 localStorage 虽然也有存储大小的限制，但比 cookie 大得多，可以达到 5M 或更大</li>
+<li>数据有效期不同<ol>
+<li>sessionStorage：仅在当前浏览器窗口关闭之前有效</li>
+<li>localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据</li>
+<li>cookie：只设置在 cookie 过期时间之前有效，即使窗口关闭或浏览器关闭</li>
+</ol>
+</li>
+<li>作用域不同<ol>
+<li>sessionStorage：不在不同的浏览器窗口中共享，即使是同一个页面</li>
+<li>localStorage：在所有同源窗口中都是共享的</li>
+<li>cookie：在所有同源中都是共享的</li>
+</ol>
+</li>
+<li>web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者</li>
+<li>web Storage 的 api 接口使用更方便</li>
+</ol>
+<h5 id="12-一个页面从输入-url-到页面加载显示完成，这个过程都发生了什么？"><a href="#12-一个页面从输入-url-到页面加载显示完成，这个过程都发生了什么？" class="headerlink" title="12.一个页面从输入 url 到页面加载显示完成，这个过程都发生了什么？"></a>12.一个页面从输入 url 到页面加载显示完成，这个过程都发生了什么？</h5><ol>
+<li>浏览器查找域名对应的 IP 地址</li>
+<li>浏览器向 web 服务器发送一个 http 请求 （TCP 三次握手）</li>
+<li>服务器 301 重定向</li>
+<li>浏览器跟踪重定向地址，请求另一个带www的网址</li>
+<li>服务器处理请求（通过路由读取资源）</li>
+<li>服务器返回一个 http 响应</li>
+<li>浏览器进行 DOM 树构建</li>
+<li>浏览器发送请求获取嵌在 html 中的资源</li>
+<li>浏览器显示完成页面</li>
+<li>浏览器发送异步请求</li>
+</ol>
+<h5 id="13-介绍一下websocket"><a href="#13-介绍一下websocket" class="headerlink" title="13.介绍一下websocket"></a>13.介绍一下websocket</h5><p>websocket 是一种网络通信协议，是 HTML5 开始提供的一种在单个 TCP 连接上进行全双工通信的协议，这个对比 http 协议来说， http 协议是一种无状态的、无连接的、单向的应用层协议，通信请求只能由客户端发起，服务端对请求做出应答处理。http 协议无法实现服务器主动向客户端发起消息，websocket 连接允许客户端和服务器之间进行全双工通信，以便任一方都可以通过建立的连接将数据推送到另一端。websocket 只需要建立一次连接，就可以一直保持连接状态</p>
+<h5 id="1-module、export、import-有什么作用"><a href="#1-module、export、import-有什么作用" class="headerlink" title="1.module、export、import 有什么作用"></a>1.<strong>module、export、import 有什么作用</strong></h5><p>module、export、import 是 ES6 用来统一前端模块化方案的设计思路和实现方案。</p>
+<p>export、import 的出现统一了前端模块化的实现方案， 整合规范了浏览器/服务端的模块化的方法，用来取代传统的 AMD/CMD、requireJS、seaJS、commondJS 等等一系列前端模块不同的实现方案，使前端模块化更加统一规范， JS 也能更加能实现大型的应用程序开发。</p>
+<p>import 引入的模块是静态加载（编译阶段加载）而不是动态加载（运行时加载）。</p>
+<p>import 引入 export 导出的接口值是动态绑定关系， 即通过该接口， 可以取到模块内部实时的值</p>
+<h5 id="2、使用箭头函数应注意什么-箭头函数和普通函数的区别"><a href="#2、使用箭头函数应注意什么-箭头函数和普通函数的区别" class="headerlink" title="2、使用箭头函数应注意什么/箭头函数和普通函数的区别"></a><strong>2、使用箭头函数应注意什么/箭头函数和普通函数的区别</strong></h5><p><strong>区别</strong></p>
+<p>用了箭头函数， this 就不是指向 window，而是父级（指向是可变的）</p>
+<p>不能够使用 arguments 对象</p>
+<p>不能用作构造函数，这就是说不能够使用 new 命令，否则会抛出一个错误</p>
+<p>不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数</p>
+<h5 id="3、介绍下-Set、Map-的区别"><a href="#3、介绍下-Set、Map-的区别" class="headerlink" title="3、介绍下 Set、Map 的区别"></a><strong>3、介绍下 Set、Map 的区别</strong></h5><p><strong>区别</strong></p>
+<p>应用场景 Set 用于数据重组，Map 用于数据储存</p>
+<p>Set：</p>
+<p>成员不能重复</p>
+<p>只有键值没有键名，类似数组</p>
+<p>可以遍历，方法有 add, delete,has</p>
+<p>Map:</p>
+<p>本质上是健值对的集合，类似集合</p>
+<p>可以遍历，可以跟各种数据格式转换</p>
+<h5 id="4、setTimeout、Promise、Async-Await-的区别（必会）"><a href="#4、setTimeout、Promise、Async-Await-的区别（必会）" class="headerlink" title="4、setTimeout、Promise、Async/Await 的区别（必会）"></a><strong>4、setTimeout、Promise、Async/Await 的区别（必会）</strong></h5><p><strong>事件循环中分为宏任务队列和微任务队列</strong></p>
+<p>宏任务（macrotask）：在新标准中叫 task</p>
+<p>主要包括：script(整体代码)，setTimeout，setInterval，setImmediate，I/O，ui rendering</p>
+<p>微任务（microtask）：在新标准中叫 jobs </p>
+<p>主要包括：process.nextTick， Promise，MutationObserver（html5 新特性）</p>
+<p><strong>setTimeout、Promise、Async/Await 的区别</strong></p>
+<p>setTimeout 的回调函数放到宏任务队列里， 等到执行栈清空以后执行</p>
+<p>Promise.then 里的回调函数会放到相应宏任务的微任务队列里，等宏任务里面的同步代码</p>
+<p>执 行完再执行async 函数表示函数里面可能会有异步方法，await 后面跟一个表达式</p>
+<p>async 方法执行时， 遇到 await 会立即执行表达式， 然后把表达式后面的代码放到微任务队列里，让出执行栈让同步代码先执行</p>
+<h5 id="5、Promise-有几种状态，什么时候会进入-catch？"><a href="#5、Promise-有几种状态，什么时候会进入-catch？" class="headerlink" title="5、Promise 有几种状态，什么时候会进入 catch？"></a><strong>5、Promise 有几种状态，什么时候会进入 catch？</strong></h5><p><strong>Promise 有几种状态</strong></p>
+<p>三个状态：pending、fulfilled、reject</p>
+<p>两个过程：padding -> fulfilled、padding -> rejected</p>
+<p><strong>Promise 什么时候会进入 catch</strong></p>
+<p>当 pending 为 rejected 时，会进入 catch</p>
+<h5 id="6、理解-async-await-以及相对-Generator-的优势"><a href="#6、理解-async-await-以及相对-Generator-的优势" class="headerlink" title="6、理解 async/await 以及相对 Generator 的优势"></a><strong>6、理解 async/await 以及相对 Generator 的优势</strong></h5><p><strong>理解 async await</strong></p>
+<p>async await 是用来解决异步的， async 函数是 Generator 函数的语法糖</p>
+<p>使用关键字 async 来表示，在函数内部使用 await 来表示异步</p>
+<p>async 函数返回一个 Promise 对象，可以使用 then 方法添加回调函数</p>
+<p>当函数执行的时候， 一旦遇到 await 就会先返回，等到异步操作完成，再接着执行函数体内后面的语句</p>
+<h5 id="1、对-Node-js-有没有了解，-它有什么特点，-适合做什么业务"><a href="#1、对-Node-js-有没有了解，-它有什么特点，-适合做什么业务" class="headerlink" title="1、对 Node.js 有没有了解， 它有什么特点， 适合做什么业务"></a><strong>1、对 Node.js 有没有了解， 它有什么特点， 适合做什么业务</strong></h5><p><strong>什么是 Node</strong></p>
+<p>Node.js...它既是开发平台, 也是运行环境, 也是个新的语言...它本身是基于 google 的</p>
+<p>javascript v8 引擎开发的, 因此在编写基于它的代码的时候使用 javascript 语言. 但是</p>
+<p>又不同于传统概念的 javascript...它的服务端功能以及部分客户端功能必须在服务端运行, </p>
+<p>所以它实际上是一种在服务端的开发+运行的 javascript 语言. 它本身可以作为 HTTP Server, </p>
+<p>也可 以当作 TCP Server 用</p>
+<p><strong>特点</strong></p>
+<p>他是一个 javascript 运行环境，依赖于 Chrome V8 引擎进行代码解释</p>
+<p>特征：单线程、事件驱动、非阻塞 I/O，轻量， 可伸缩，适于实时数据交互应用</p>
+<p>单进程， 单线程 (一个应用程序对应一个进程, 一个进程下面会有多个线程, 每个线程用</p>
+<p>于 </p>
+<p>处理任务..)</p>
+<p>Node 无法直接渲染静态页面，提供静态服务</p>
+<p>Node 没有根目录的概念</p>
+<p>Node 必须通过路由程序指定文件才能渲染文件</p>
+<p>Node 比其他服务端性能更好，速度更快</p>
+<p><strong>适用业务</strong></p>
+<p>Node.js 是单线程， 非阻塞 I/O，事件驱动， 它的特点决定了它适合做一些大量 I/O 的东西，</p>
+<p>比如， 聊天室，表单提交等不需要大量计算的功能。做一些微信后端开发， 或者做消息系统</p>
+<p>等。可以整个项目用，也可以根据它的特点在某个模块使用， 比如 socketio，打造一个消息</p>
+<p>系统等</p>
+<h5 id="2、Node-的优点是什么？-缺点是什么（必会）"><a href="#2、Node-的优点是什么？-缺点是什么（必会）" class="headerlink" title="2、Node 的优点是什么？ 缺点是什么（必会）"></a><strong>2、Node 的优点是什么？ 缺点是什么（必会）</strong></h5><p><strong>优点</strong></p>
+<p>1、高并发（最主要的一个优点）</p>
+<p>2、适合 I/O 密集型应用</p>
+<p><strong>缺点</strong></p>
+<p>1、不适合 CPU 密集型应用； CPU 密集型应用给 node 带来的挑战主要是： 由于 JavaScript 单</p>
+<p>线程的原因，如果有长时间运行的计算（比如大循环），将会导致 CPU 时间片不能释放，使</p>
+<p>得后续 I/O 无法发起；</p>
+<p>解决方案： 分解大型运算任务为多个小任务， 使得运算能够适时释放，不阻塞 I/O 调用的发</p>
+<p>起；</p>
+<p>2、只支持单核 CPU，不能充分利用 CPU</p>
+<p>3、可靠性低，一旦代码某个环节崩溃，整个系统都崩溃</p>
+<p><strong>原因：</strong> 单进程，单线程</p>
+<p><strong>解决方案</strong></p>
+<p>3.1）Nnigx 反向代理，负载均衡，开多个进程，绑定多个端口</p>
+<p>3.2）开多个进程监听同一个端口， 使用 cluster 模块</p>
+<p>4、开源组件库质量参差不齐，更新快，向下不兼容</p>
+<p>5、Debug 不方便，错误没有 stack trace </p>
+<h5 id="3、为什么要进行模块化（高薪常问）"><a href="#3、为什么要进行模块化（高薪常问）" class="headerlink" title="3、为什么要进行模块化（高薪常问）"></a><strong>3、为什么要进行模块化（高薪常问）</strong></h5><p>目前前端的开发形势就是模块化和组件化；从软件工程学分析来说就是有了更好的可维护</p>
+<p>性、可复用性等好处； 但是前端的主要语言 js 在 ES6</p>
+<p>之前却没有模块化功能，之前有使用 require.js 和 sea.js 但是推出 ES6 的模块化之后，</p>
+<p>ES6 的模块化使用形式基本统一</p>
+<h4 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a><strong>Webpack</strong></h4><h5 id="1、什么是-Webpack（必会）"><a href="#1、什么是-Webpack（必会）" class="headerlink" title="1、什么是 Webpack（必会）"></a><strong>1、什么是 Webpack（必会）</strong></h5><p>1、基本定义</p>
+<p>Webpack 是一个打包模块化 javascript 的工具，在 Webpack 里一切文件皆模块，通过</p>
+<p>loader 转换文件， 通过 plugin 注入钩子， 最后输出由多个模块组合成的文件，Webpack 专注构</p>
+<p>建模块化项目， Webpack 可以看做是模块打包机： 它做的事情是，分析你的项目结构，找到</p>
+<p>JavaScript 模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript 等），并将</p>
+<p>其打包为合适的格式以供浏览器使用</p>
+<h5 id="2、Webpack-的优点是什么？（必会）"><a href="#2、Webpack-的优点是什么？（必会）" class="headerlink" title="2、Webpack 的优点是什么？（必会）"></a><strong>2、Webpack 的优点是什么？（必会）</strong></h5><p>1、专注于处理模块化的项目，能做到开箱即用， 一步到位</p>
+<p>2、通过 plugin 扩展，完整好用又不失灵活</p>
+<p>3、使用场景不局限于 web 开发</p>
+<p>4、社区庞大活跃，经常引入紧跟时代发展的新特性， 能为大多数场景找到已有的开源扩展</p>
+<p>5、提供了更好的开发体验</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/26/64ea10217f8f4.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/26/64ea10217f8f4.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">kilito</div><div class="post-copyright__author_desc">生活明朗,万物可爱</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://ekilito.github.io/posts/3936.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://ekilito.github.io/posts/3936.html')">web面试</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://bu.dusays.com/2023/08/13/64d894b4a4f06.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d894b4a4f06.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://bu.dusays.com/2023/08/13/64d894b1726cd.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d894b1726cd.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://ekilito.github.io/posts/3936.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=web面试&amp;url=https://ekilito.github.io/posts/3936.html&amp;pic=https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ekilito.github.io" target="_blank">kilito</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>面试<span class="tagsPageCount">2</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/3929.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">web面试</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/posts/3929.html" title="web面试"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-10-02</div><div class="title">web面试</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/26/64ea10217f8f4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/01/64c884ccc8322.png" ait="status"/></div></div><div class="author-info__description">以欢喜心，慢度日常，四季清宁，万物可爱.</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">kilito</h1><div class="author-info__desc">生活明朗,万物可爱</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/ekilito" target="_blank" title="github"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-github"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/194984444" target="_blank" title="B站"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-bilibili"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://cdn.jsdelivr.net/gh/ekilito/picgoblog/img/weixinhao.jpg" target="_blank" title="微信"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-weixin"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://res.abeim.cn/api/qq/?qq=2856509748" target="_blank" title="QQ"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-qq"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://m.weibo.cn/u/7520593701" target="_blank" title="微博"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-weibo"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://music.163.com/#/user/home?id=573476405" target="_blank" title="网易云"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">🍧今天也是元气满满的一天呢~ 开心一点！🍧</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-css%E7%9A%84%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">3.css的盒模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-css%E4%B8%AD%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E4%BB%A5%E5%8F%8Acss%E6%9D%83%E9%87%8D%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%EF%BC%9F"><span class="toc-text">4.css中选择器的优先级以及css权重如何计算？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-px%E3%80%81em%E3%80%81rem%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">5.px、em、rem的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-rem%E9%80%82%E9%85%8D%E6%96%B9%E6%A1%88"><span class="toc-text">6.rem适配方案</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-display-none-%E4%B8%8E-visibility-hidden-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">7.display:none 与 visibility:hidden 的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-position%E7%9A%84%E5%80%BC%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%88%86%E5%88%AB%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">8.position的值有哪些，分别有哪些作用？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%87%BA%E7%8E%B0%E6%B5%AE%E5%8A%A8%EF%BC%9F%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E6%9C%89%E5%BC%95%E8%B5%B7%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F%E5%A6%82%E4%BD%95%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="toc-text">9.为什么会出现浮动？浮动元素有引起什么问题？如何清除浮动？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E7%AE%80%E8%BF%B0%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90flex%E5%B8%83%E5%B1%80%E4%BB%A5%E5%8F%8Arem%E5%B8%83%E5%B1%80%EF%BC%9F"><span class="toc-text">10.简述弹性盒子flex布局以及rem布局？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3margin%E5%A1%8C%E9%99%B7%EF%BC%9F"><span class="toc-text">11.如何解决margin塌陷？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#13-BFC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">13.BFC是什么？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript-%E5%9F%BA%E7%A1%80"><span class="toc-text">JavaScript 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-JavaScript%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9Fnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">1.JavaScript的基本类型有哪些？引用类型有哪些？null和undefined的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%ADJavaScript-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-text">2.如何判断JavaScript 的数据类型？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E7%AE%80%E8%BF%B0%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">3.简述创建函数的几种方式？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-JavaScript-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">4.JavaScript 创建对象的几种方式？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E5%92%8C-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">6.&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-null%EF%BC%8Cundefined-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">7.null，undefined 的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-JavaScript-%E4%B8%AD%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BC%9A%E8%BF%94%E5%9B%9E-undefined-%E5%80%BC%EF%BC%9F"><span class="toc-text">8.JavaScript 中什么情况下会返回 undefined 值？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">9.如何区分数组和对象？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E9%99%8D%E7%BB%B4%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">10.多维数组降维的几种方法？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#13-%E4%BB%80%E4%B9%88%E6%98%AF%E7%B1%BB%E6%95%B0%E7%BB%84%EF%BC%88%E4%BC%AA%E6%95%B0%E7%BB%84%EF%BC%89%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%9C%9F%E5%AE%9E%E7%9A%84%E6%95%B0%E7%BB%84%EF%BC%9F"><span class="toc-text">13.什么是类数组（伪数组），如何转换为真实的数组？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#14-JavaScript%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E3%80%81%E9%A2%84%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%EF%BC%9F"><span class="toc-text">14.JavaScript中的作用域、预解析与变量声明提升？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#15-%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E4%B8%8E%E5%87%BD%E6%95%B0%E6%8F%90%E5%8D%87%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">15.变量提升与函数提升的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#16-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%EF%BC%9F"><span class="toc-text">16.什么是作用域链？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#17-%E5%A6%82%E4%BD%95%E5%BB%B6%E9%95%BF%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%EF%BC%9F"><span class="toc-text">17.如何延长作用域链？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#18-%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%80%BC%E6%98%AF%E4%BB%80%E4%B9%88%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="toc-text">18.判断一个值是什么类型有哪些方法?</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebAPI"><span class="toc-text">WebAPI</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-event%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%EF%BC%9F"><span class="toc-text">6.event对象的常见应用？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E4%BA%8B%E4%BB%B6%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-text">8.事件三要素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">9.事件执行过程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E8%B0%88%E8%B0%88%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9F"><span class="toc-text">10.谈谈事件委托的理解？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-JavaScript-%E4%B8%AD%E5%AE%9A%E6%97%B6%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">11.JavaScript 中定时器有哪些？区别及用法是什么？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#13-JS%E6%8B%96%E5%8A%A8%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">13.JS拖动的原理？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#14-%E7%AE%80%E8%BF%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B%EF%BC%8CDOM%E6%A0%91%E5%92%8C%E6%B8%B2%E6%9F%93%E6%A0%91%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">14.简述浏览器的渲染过程，DOM树和渲染树的区别？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#15-%E5%A6%82%E4%BD%95%E6%9C%80%E5%B0%8F%E5%8C%96%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81%EF%BC%9F"><span class="toc-text">15.如何最小化重绘和回流？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#16-JS%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">16.JS延迟加载的方式有哪些？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/3936.html" title="web面试"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="web面试"/></a><div class="content"><a class="title" href="/posts/3936.html" title="web面试">web面试</a><time datetime="2023-10-13T06:43:53.500Z" title="发表于 2023-10-13 14:43:53">2023-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3929.html" title="web面试"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/21/64e360fb93fef.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="web面试"/></a><div class="content"><a class="title" href="/posts/3929.html" title="web面试">web面试</a><time datetime="2023-10-02T05:10:47.779Z" title="发表于 2023-10-02 13:10:47">2023-10-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/883eae6.html" title="智慧园区后台"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/09/04/64f5e41cda997.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智慧园区后台"/></a><div class="content"><a class="title" href="/posts/883eae6.html" title="智慧园区后台">智慧园区后台</a><time datetime="2023-09-04T14:01:29.006Z" title="发表于 2023-09-04 22:01:29">2023-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f82ea27.html" title="Vue原理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2022/07/17/62d4106238e7c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue原理"/></a><div class="content"><a class="title" href="/posts/f82ea27.html" title="Vue原理">Vue原理</a><time datetime="2023-08-20T08:31:26.861Z" title="发表于 2023-08-20 16:31:26">2023-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/undefined.html" title="设计模式"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2022/11/30/6386ccb347d84.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式"/></a><div class="content"><a class="title" href="/posts/undefined.html" title="设计模式">设计模式</a><time datetime="2023-08-19T08:57:01.871Z" title="发表于 2023-08-19 16:57:01">2023-08-19</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:2856509748@qq.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/u/7520593701" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://res.abeim.cn/api/qq/?qq=2856509748" title="QQ"><i class="anzhiyufont anzhiyu-icon-qq"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/26/64ea10217f8f4.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/ekilito" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/194984444" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAyFaeLYIe730NcTBynr1H-tGRx3EfYELNjx05MMP4pEc" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/糖果屋-营业中-6adea8?style=social&amp;logo=cakephp" alt="小小清" title="小小清"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2023 By <a class="footer-bar-link" href="/" title="kilito" target="_blank">kilito</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.","你今天真好看！","今天也是元气满满的一天呢！","以欢喜心&#44;慢度日常&#44;四季清宁&#44;万物可爱."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.0.15/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/ekilito/blog" title="主题">主题</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://7bu.top/" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://wudl.cn" title="主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/48.png" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.wudl.cn" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ccv-engineer.gitee.io/" title="旧站"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/32.png" alt="旧站"/><span class="back-menu-item-text">旧站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://7bu.top/" title="图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="图床"/><span class="back-menu-item-text">图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tag faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://chatgpt.wudl.cn"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> ChatGPT</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://gpt.zhizhubao.com/chat"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 私人助理</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/?id=891137324&amp;server=netease"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/kongtiao/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/zaobao/"><span> 早报</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Generato/" style="font-size: 0.88rem;">Generato<sup>1</sup></a><a href="/tags/fetch/" style="font-size: 0.88rem;">fetch<sup>1</sup></a><a href="/tags/js%E9%9D%A2%E8%AF%95%E9%A2%98/" style="font-size: 0.88rem;">js面试题<sup>1</sup></a><a href="/tags/koa/" style="font-size: 0.88rem;">koa<sup>1</sup></a><a href="/tags/this/" style="font-size: 0.88rem;">this<sup>1</sup></a><a href="/tags/vue%E5%8E%9F%E7%90%86/" style="font-size: 0.88rem;">vue原理<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%86%99/" style="font-size: 0.88rem;">手写<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%86%99Promise/" style="font-size: 0.88rem;">手写Promise<sup>1</sup></a><a href="/tags/%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA/" style="font-size: 0.88rem;">智慧园区<sup>1</sup></a><a href="/tags/%E6%9F%AF%E9%87%8C%E5%8C%96/" style="font-size: 0.88rem;">柯里化<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.88rem;">生活<sup>1</sup></a><a href="/tags/%E7%BB%A7%E6%89%BF/" style="font-size: 0.88rem;">继承<sup>1</sup></a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 0.88rem;">设计模式<sup>1</sup></a><a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 0.88rem;">闭包<sup>1</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 0.88rem;">面试<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="7061615494" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/user/home?id=573476405&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script> // 消除控制台打印
+ var HoldLog = console.log;
+ console.log = function () {};
+ let now1 = new Date();
+ queueMicrotask(() => {
+   const Log = function () {
+     HoldLog.apply(console, arguments);
+   }; //在恢复前输出日志
+   const grt = new Date("08/04/2023 20:00:00"); //此处修改你的建站时间或者网站上线时间
+   now1.setTime(now1.getTime() + 250);
+   const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+   const dnum = Math.floor(days);
+   const ascll = [
+     `欢迎来到ekilito🥝の小窝!`,
+     `Future is now 🍭🍭🍭`,
+     `
+         
+  
+██    ██   ██   ██        ██   ████████    ██████  
+██  ██     ██   ██        ██      ██      ██    ██ 
+████       ██   ██        ██      ██      ██    ██ 
+██  ██     ██   ██        ██      ██      ██    ██ 
+██    ██   ██   ███████   ██      ██       ██████  
+         
+         `,
+     "已上线",
+     dnum,
+     "天",
+     "©2022 By kilito V1.6.6",
+   ];
+   const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+   setTimeout(
+     Log.bind(
+       console,
+       `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+       "color:#3b70fc",
+       "",
+       "color:#3b70fc",
+       "color:#3b70fc",
+       "",
+       "color:#3b70fc",
+       ""
+     )
+   );
+   setTimeout(
+     Log.bind(
+       console,
+       `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+       "color:white; background-color:#4fd953",
+       "",
+       "",
+       'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+     )
+   );
+
+   setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+   setTimeout(
+     console.warn.bind(
+       console,
+       "%c ⚡ Powered by 小小清 %c 你正在访问 kilito 的博客.",
+       "color:white; background-color:#f0ad4e",
+       ""
+     )
+   );
+
+   setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+   setTimeout(
+     console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+   );
+ });</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("08/04/2023 20:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      img.src = "https://img.shields.io/badge/糖果屋-打烊了-6adea8?style=social&amp;logo=coffeescript";
+      img.title = "小小清";
+      img.alt = "小小清";
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.wudl.cn/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.18/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.wudl.cn/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="/js/anzhiyu/comment_barrage.js"></script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.wudl.cn/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.18/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "longlong1015@outlook.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/js/gghello.js"></script><script src="/js/iconfont.js"></script><script src="/js/cursur.js"></script><script type="text/javascript" src="https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js"></script><script src="/js/fps.js"></script><div id="fps"></div><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
